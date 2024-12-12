@@ -1,0 +1,155 @@
+F:\WorkingDrive\100004659\BitBucket\FD_CPTP_Unified\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.deps.json
+F:\WorkingDrive\100004659\BitBucket\FD_CPTP_Unified\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+F:\WorkingDrive\100004659\BitBucket\FD_CPTP_Unified\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+F:\WorkingDrive\100004659\BitBucket\FD_CPTP_Unified\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.dll
+F:\WorkingDrive\100004659\BitBucket\FD_CPTP_Unified\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.xml
+F:\WorkingDrive\100004659\BitBucket\FD_CPTP_Unified\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+F:\WorkingDrive\100004659\BitBucket\FD_CPTP_Unified\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+F:\WorkingDrive\100004659\BitBucket\FD_CPTP_Unified\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+F:\WorkingDrive\100004659\BitBucket\FD_CPTP_Unified\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CopyComplete
+F:\WorkingDrive\100004659\BitBucket\FD_CPTP_Unified\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+F:\WorkingDrive\100004659\BitBucket\FD_CPTP_Unified\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+F:\WorkingDrive\100004659\BitBucket\FD_CPTP_Unified\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csprojAssemblyReference.cache
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.deps.json
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.dll
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.xml
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.AssemblyReference.cache
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.GeneratedMSBuildEditorConfig.editorconfig
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CopyComplete
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.deps.json
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.dll
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.xml
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.AssemblyReference.cache
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.GeneratedMSBuildEditorConfig.editorconfig
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.sourcelink.json
+F:\WorkingDrive\100004659\BitBucket\Occupation changes\repo-mf-fdcp-8.0-fd-cptp-unified3\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_.D880483D.Up2Date
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.deps.json
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.dll
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.xml
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.AssemblyReference.cache
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.GeneratedMSBuildEditorConfig.editorconfig
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.sourcelink.json
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_.D880483D.Up2Date
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.deps.json
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.dll
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.xml
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.AssemblyReference.cache
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.GeneratedMSBuildEditorConfig.editorconfig
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.sourcelink.json
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_.D880483D.Up2Date
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+F:\WorkingDrive\100004659\BitBucket\repo-mf-fdcp-8.0-fd-cptp-unified-pan-veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+D:\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.AssemblyReference.cache
+D:\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+D:\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+D:\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+D:\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.sourcelink.json
+D:\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+D:\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.deps.json
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.dll
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.xml
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.AssemblyReference.cache
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.sourcelink.json
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_.D880483D.Up2Date
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+E:\Working Drive\100004659\CPTP_UNI Pan Veri\Avinash\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+D:\Nitish_Kahar_Projects\Avinash_Proj\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.deps.json
+D:\Nitish_Kahar_Projects\Avinash_Proj\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+D:\Nitish_Kahar_Projects\Avinash_Proj\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+D:\Nitish_Kahar_Projects\Avinash_Proj\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.AssemblyReference.cache
+D:\Nitish_Kahar_Projects\Avinash_Proj\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Nitish_Kahar_Projects\Avinash_Proj\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+D:\Nitish_Kahar_Projects\Avinash_Proj\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+D:\Nitish_Kahar_Projects\Avinash_Proj\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+D:\Nitish_Kahar_Projects\Avinash_Proj\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.sourcelink.json
+D:\Nitish_Kahar_Projects\Avinash_Proj\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+D:\Nitish_Kahar_Projects\Avinash_Proj\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.deps.json
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.AssemblyReference.cache
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.sourcelink.json
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\backup CPTP uni\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.deps.json
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\backup CPTP uni\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\backup CPTP uni\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\backup CPTP uni\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.AssemblyReference.cache
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\backup CPTP uni\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\backup CPTP uni\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\backup CPTP uni\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\backup CPTP uni\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\backup CPTP uni\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.sourcelink.json
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\backup CPTP uni\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\backup CPTP uni\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.deps.json
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.AssemblyReference.cache
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.sourcelink.json
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI - Without Renewal\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.deps.json
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI - Without Renewal\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI - Without Renewal\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI - Without Renewal\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.AssemblyReference.cache
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI - Without Renewal\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI - Without Renewal\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI - Without Renewal\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI - Without Renewal\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI - Without Renewal\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.sourcelink.json
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI - Without Renewal\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+E:\Working Drive\100004659\Nitish CPTP_UNI BOTC UNI\CPTP UNI - Without Renewal\CPTP_UNI Pan Veri\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+D:\Avinash\Handover\CPTP_UNI\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.deps.json
+D:\Avinash\Handover\CPTP_UNI\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+D:\Avinash\Handover\CPTP_UNI\FD_CPTP_UNIFIED.BO\bin\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb
+D:\Avinash\Handover\CPTP_UNI\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.AssemblyReference.cache
+D:\Avinash\Handover\CPTP_UNI\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Avinash\Handover\CPTP_UNI\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfoInputs.cache
+D:\Avinash\Handover\CPTP_UNI\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.AssemblyInfo.cs
+D:\Avinash\Handover\CPTP_UNI\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.csproj.CoreCompileInputs.cache
+D:\Avinash\Handover\CPTP_UNI\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.sourcelink.json
+D:\Avinash\Handover\CPTP_UNI\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.dll
+D:\Avinash\Handover\CPTP_UNI\FD_CPTP_UNIFIED.BO\obj\Debug\netcoreapp2.1\FD_CPTP_UNIFIED.BO.pdb

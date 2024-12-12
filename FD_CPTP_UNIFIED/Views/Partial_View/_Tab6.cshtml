@@ -1,0 +1,138 @@
+﻿<div id="DV_NOM" class="tab-container tab-pane" data-tab-index="6" style="display:none;">
+    <div class="panel-heading panel-headingNW">
+        <i class="fa fa-users head-icon" aria-hidden="true"></i> Nominee Information
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div id="DV_PROV_NOM" class="row1">
+            <div id="IdProvNomineeDtl">
+                <div class="col-md-6 col-sm-12 col-xs-12 InpOutrCls">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">Provisional Nominee<span class="red-text">*</span></label>
+                        <select id="ddlProvNominee" class="form-control FO_DTLS">
+                            <option value="select">Select</option>
+                          
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 col-sm-12 col-xs-12 InpOutrCls">
+                <span class="OrClass">OR</span>
+            </div>
+            <div class="col-md-2 col-sm-12 col-xs-12 InpOutrCls InpOutrClsTextAlng">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label" style="visibility:hidden;">Add New Nominee<span class="red-text">*</span></label>
+                    <button type="button" id="btnAddNewNominee" class="comnBtn2" style="margin:0;">Add New Nominee</button>
+                </div>
+            </div>
+        </div>
+        <div class="row1" id="DV_NOM_DTLS" style="display:none">
+
+            <div class="col-md-1 col-sm-2 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Prefix<span class="red-text">*</span></label>
+                    <select id="ddlNomTitle" name="TITLE" class="form-control">
+                        <option value="select">Select</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">First Name<span class="red-text">*</span></label>
+                    <input type="text" id="txtNomFName" maxlength="30" class="form-control uppercase charactor_only RemoveSpace">
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Middle Name</label>
+                    <input type="text" id="txtNomMName" maxlength="30" class="form-control uppercase charactor_only">
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Last Name</label>
+                    <input type="text" id="txtNomLName" maxlength="30" class="form-control uppercase charactor_only">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Relation of Nominee with Investor<span class="red-text">*</span></label>
+                    <select id="ddlNomRelation" class="form-control">
+                        <option value="select">Select</option>
+                    </select>
+                </div>
+            </div>
+            <div class="clearfix" style="clear:both;"></div>
+            <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm form-check">
+                    <label class="control-label" style="visibility:hidden;">&nbsp;</label>
+                    <div>
+                        <input type="checkbox" class="form-check-input" id="chkIsNomMinor">
+                        <label class="form-check-label" for="exampleCheck1">Is Nominee a Minor ?</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm SearchDate" id="DobSearch">
+                    <label class="control-label">DOB<span id="SPN_DOB" class="red-text"></span></label>
+                    <input type="text" id="txtNomDOB" class="form-control  test_color ">
+                </div>
+            </div>
+            @*<div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">PAN<span class="red-text">*</span></label>
+                    <input type="text" id="txtNomPAN" class="form-control">
+                </div>
+            </div>*@
+            <div class="col-md-1 col-sm-2 col-xs-12 InpOutrCls N_GUARDIAN" style="display:none">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Prefix<span class="red-text">*</span></label>
+                    <select id="ddlNomGuardianTitle" name="TITLE" class="form-control">
+                        <option value="select">Select</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls N_GUARDIAN" style="display:none">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Guardian's First Name<span class="red-text">*</span></label>
+                    <input type="text" id="txtNomGuardianFName" maxlength="30" class="form-control uppercase charactor_only RemoveSpace">
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls N_GUARDIAN" style="display:none">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Guardian's Middle Name</label>
+                    <input type="text" id="txtNomGuardianMName" maxlength="30" class="form-control uppercase charactor_only">
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls N_GUARDIAN" style="display:none">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Guardian's Last Name</label>
+                    <input type="text" id="txtNomGuardianLName" maxlength="30" class="form-control uppercase charactor_only">
+                </div>
+            </div>
+            <div class="row">
+                <h4 class="SecHeaderTxt" style="padding-left:20px;">Address of Nominee</h4>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm form-check">
+                    <div>
+                        <input type="checkbox" class="form-check-input" id="chkNomAddrSameAsFH">
+                        <label class="form-check-label" for="exampleCheck1">Address Same as Investor</label>
+                    </div>
+                </div>
+            </div>
+            <div id="DV_NOM_ADDR">
+                @{await Html.RenderPartialAsync("~/Views/Partial_View/_Address.cshtml");}
+            </div>
+            <div class="height5px"></div>
+            <div class="height5px"></div>
+            <div class="height5px"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls text-center">
+                <button type="button" id="btnCancel06" class="comnBtnSecondary">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" id="btnBack06" class="comnBtnSecondary">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" id="btnsubmit06" class="comnBtn2">Save &amp; Continue</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>

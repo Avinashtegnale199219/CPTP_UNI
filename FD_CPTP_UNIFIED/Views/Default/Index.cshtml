@@ -1,0 +1,466 @@
+﻿@section Styles{
+    <link href="~/Default/css/default.css" rel="stylesheet" asp-append-version="true" />
+}
+
+
+<div class="container-fluid">
+    <div class="ContArea01">
+        <div class="col-md-12 col-sm-12 col-xs-12" id="" style="text-align: center;min-height:400px">
+            <div class="switchOutr">
+                <div class="toggle_switcher">
+                    <input id="toggle-on" class="toggleNew toggleNew-left" name="toggleName" value="0" type="radio" checked>
+                    <label for="toggle-on" class="btn-toggleLbl">PURCHASE</label>
+                    <input id="toggle-off" class="toggleNew toggleNew-right" name="toggleName" value="1" type="radio">
+                    <label for="toggle-off" class="btn-toggleLbl">RENEWAL</label>
+                </div>
+            </div>
+            <div class="MainBoxesOutr" id="idPurchaseBox">
+                <div class="flowRdBtnOutr">
+                    <label class="ActvBox ActvBoxToggle1">
+                        <input type="radio" name="actveMe1" id="rdoOnline" value="1" checked="checked" />Online/RTGS/NEFT
+                    </label>
+                    <label class="ActvBoxToggle2">
+                        <input type="radio" name="actveMe1" id="rdoOffline" value="2" />Cheque/DD
+                    </label>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="boxOutrDiv boxOutrDiv1">
+                    <a class="boxInrDiv">
+                        <img src="images/Num01.png" alt="01" class="boxInrNum" />
+                        <div class="boxInrCircle">
+                            <img src="images/add_iconSVG2Hvr.svg" alt="" class="circleImg" />
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="boxInrLineBar borderTopLeftRadius borderBottomLeftRadius">
+                            STEP 1
+                        </div>
+                        <h5 class="boxInrStepTtl">Application Entry</h5>
+                    </a>
+                    <div class="boxInrToggleDiv " id="TglDiv1" style="display: none;">
+                        <ul class="UlAppOpt">
+                            <li id="liAddApplication">
+                                <a href="DataEntry?PaymentMode=1" id="P_AddApplication" class="submod" onclick="" code="">
+                                    <img src="images/add_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/add_iconSVG2.svg" alt="" class="tglMenuImg2" />Add Application
+                                </a>
+                                <div class="webui-popover in positionSet1">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">Book a new FD for Fresh/Existing investor.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="liEditApplication">
+                                <a href="ApplicationEdit" onclick="" code="MFEAPP00090">
+                                    <img src="images/edit_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/edit_iconSVG2.svg" alt="" class="tglMenuImg2" />Edit Application
+                                </a>
+                                <div class="webui-popover in positionSet1">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">Modify existing application before step 2.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="liCopyApplication">
+                                <a href="ApplicationCopy" onclick="" code="MFEAPP00090">
+                                    <img src="images/copy_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/copy_iconSVG2.svg" alt="" class="tglMenuImg2" />Copy Application
+                                </a>
+                                <div class="webui-popover in positionSet1">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">Create a copy of existing application.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="ApplicationCancel" onclick="" code="MFEAPP00090">
+                                    <img src="images/cancel_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/cancel_iconSVG2.svg" alt="" class="tglMenuImg2" />Cancel Application
+                                </a>
+                                <div class="webui-popover in positionSet1">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">To Cancel the application in case of discrepancy.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="ApplicationView" onclick="" code="MFEAPP00090">
+                                    <img src="images/view_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/view_iconSVG2.svg" alt="" class="tglMenuImg2" />View Application
+                                </a>
+                                <div class="webui-popover in positionSet1">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">View application in read-only mode.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="boxInrDiv boxInrDivLast boxInrDivEven">
+                        <img src="images/Num02.png" alt="02" class="boxInrNum" />
+                        <div class="boxInrCircle">
+                            <img src="images/Gn_ShortSVG2Hvr.svg" alt="" class="circleImg" />
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="boxInrLineBar borderTopRightRadius borderBottomRightRadius">
+                            STEP 2
+                        </div>
+                        <h5 class="boxInrStepTtl">
+                            Investment Completion
+                        </h5>
+                    </a>
+                    <div class="boxInrToggleDiv SetLeftPos2" id="TglDiv2" style="display: none;">
+                        <ul class="UlAppOpt">
+                            <li>
+                                <a href="GenerateShortURL?TabIndex=1">
+                                    <img src="images/Gn_ShortSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/Gn_ShortSVG1.svg" alt="" class="tglMenuImg2" />Investment Declaration Status
+                                </a>
+                            </li>
+                            <li>
+                                <a href="GenerateShortURL?TabIndex=2" onclick="" code="MFEAPP00090">
+                                    <img src="images/Gn_ShortSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/Gn_ShortSVG1.svg" alt="" class="tglMenuImg2" />Regenerate Short URL
+                                </a>
+                                <div class="webui-popover in positionSet2">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">Regenerate investment declaration acceptance and payment short URL.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            @*<li>
+                                <a href="RTGS_UTR_Upload">
+                                <img src="images/Gn_ShortSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/Gn_ShortSVG1.svg" alt="" class="tglMenuImg2" />UTRN File Upload
+                                </a>
+                                </li>*@
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="boxOutrDiv boxOutrDiv2" style="display:none;">
+                    <a class="boxInrDiv">
+                        <img src="images/Num01.png" alt="01" class="boxInrNum" />
+                        <div class="boxInrCircle">
+                            <img src="images/add_iconSVG2Hvr.svg" alt="" class="circleImg" />
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="boxInrLineBar borderTopLeftRadius borderBottomLeftRadius">
+                            STEP 1
+                        </div>
+                        <h5 class="boxInrStepTtl">Application Entry</h5>
+                    </a>
+                    <div class="boxInrToggleDiv " id="TglDiv3" style="display: none;">
+                        <ul class="UlAppOpt">
+                            <li id="liAddApplication2">
+                                <a href="DataEntry?PaymentMode=2" onclick="" code="MFEAPP00090">
+                                    <img src="images/add_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/add_iconSVG2.svg" alt="" class="tglMenuImg2" />Add Application
+                                </a>
+                                <div class="webui-popover in positionSet1">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">Book a new FD for Fresh/Existing investor.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="liEditApplication2">
+                                <a href="ApplicationEdit" onclick="" code="MFEAPP00090">
+                                    <img src="images/edit_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/edit_iconSVG2.svg" alt="" class="tglMenuImg2" />Edit Application
+                                </a>
+                                <div class="webui-popover in positionSet1">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">Modify existing application before step 2.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="liCopyApplication">
+                                <a href="ApplicationCopy" onclick="" code="MFEAPP00090">
+                                    <img src="images/copy_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/copy_iconSVG2.svg" alt="" class="tglMenuImg2" />Copy Application
+                                </a>
+                                <div class="webui-popover in positionSet1">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">Create a copy of existing application.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="ApplicationCancel" onclick="" code="MFEAPP00090">
+                                    <img src="images/cancel_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/cancel_iconSVG2.svg" alt="" class="tglMenuImg2" />Cancel Application
+                                </a>
+                                <div class="webui-popover in positionSet1">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">To Cancel the application in case of discrepancy.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="ApplicationView" onclick="" code="MFEAPP00090">
+                                    <img src="images/view_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/view_iconSVG2.svg" alt="" class="tglMenuImg2" />View Application
+                                </a>
+                                <div class="webui-popover in positionSet1">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">View application in read-only mode.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="boxInrDiv boxInrDivMiddle boxInrDivEven">
+                        <img src="images/Num02.png" alt="02" class="boxInrNum" />
+                        <div class="boxInrCircle">
+                            <img src="images/Gn_ShortSVG2Hvr.svg" alt="" class="circleImg" />
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="boxInrLineBar">
+                            STEP 2
+                        </div>
+                        <h5 class="boxInrStepTtl">
+                            Investment Completion
+                        </h5>
+                    </a>
+                    <div class="boxInrToggleDiv SetLeftPos2" id="TglDiv4" style="display: none;">
+                        <ul class="UlAppOpt">
+                            <li>
+                                <a href="GenerateShortURL?TabIndex=1">
+                                    <img src="images/Gn_ShortSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/Gn_ShortSVG1.svg" alt="" class="tglMenuImg2" />Investment Declaration Status
+                                </a>
+                            </li>
+                            <li>
+                                <a href="GenerateShortURL?TabIndex=2" onclick="" code="MFEAPP00090">
+                                    <img src="images/Gn_ShortSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/Gn_ShortSVG1.svg" alt="" class="tglMenuImg2" />Regenerate Short URL
+                                </a>
+                                <div class="webui-popover in positionSet2">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">Regenerate investment declaration acceptance and payment short URL.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            @*<li>
+                                <a href="RTGS_UTR_Upload">
+                                <img src="images/Gn_ShortSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/Gn_ShortSVG1.svg" alt="" class="tglMenuImg2" />UTRN File Upload
+                                </a>
+                                </li>*@
+
+                        </ul>
+                    </div>
+                    <a class="boxInrDiv boxInrDivLast">
+                        <img src="images/Num03.png" alt="03" class="boxInrNum" />
+                        <div class="boxInrCircle">
+                            <img src="images/Py_EntrySVG2Hvr.svg" alt="" class="circleImg" />
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="boxInrLineBar borderTopRightRadius borderBottomRightRadius">
+                            STEP 3
+                        </div>
+                        <h5 class="boxInrStepTtl">Payin Slip</h5>
+                    </a>
+                    <div class="boxInrToggleDiv SetLeftPos3" id="TglDiv5" style="display: none;">
+                        <ul class="UlAppOpt">
+                            <li>
+                                <a href="PayinSlip" onclick="" code="MFEAPP00090">
+                                    <img src="images/Py_EntrySVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/Py_EntrySVG1.svg" alt="" class="tglMenuImg2" />Payin Slip Entry
+                                </a>
+                                <div class="webui-popover in positionSet2">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p>
+                                                <img src="images/Icon_Info1.svg" class="IconImgCls">Select Bank and Branch details for Cheque submission.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="PayinSlip" onclick="" code="MFEAPP00090"><img src="images/renewal_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/renewal_iconSVG2.svg" alt="" class="tglMenuImg2" />Payin Slip Generation</a>
+                                <div class="webui-popover in positionSet2">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p>
+                                                <img src="images/Icon_Info1.svg" class="IconImgCls">Generate/Print pay in slip for cheque submission.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="MainBoxesOutr RenewalBox" id="idRenewalBox" style="display: none;">
+                <div class="flowRdBtnOutr" style="visibility:hidden;height:28px;"></div>
+              
+                <div style="clear:both;"></div>
+                <div class="boxOutrDiv boxOutrDiv3">
+                    <a class="boxInrDiv">
+                        <img src="images/Num01.png" alt="01" class="boxInrNum" />
+                        <div class="boxInrCircle">
+                            <img src="images/renewal_iconSVG2Hvr.svg" alt="" class="circleImg" />
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="boxInrLineBar borderTopLeftRadius borderBottomLeftRadius">
+                            STEP 1
+                        </div>
+                        <h5 class="boxInrStepTtl">Renew Application</h5>
+                    </a>
+                    <div class="boxInrToggleDiv " id="TglDiv1Renw" style="display: none;">
+                        <ul class="UlAppOpt">
+                            <li id="liAddApplicationRenw">
+                                <a href="ApplicationRenewal" id="addOnlineRenw" onclick="" code="MFEAPP00090">
+                                    <img src="images/add_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="../wwwroot/images/add_iconSVG2.svg" alt="" class="tglMenuImg2" />Renew Application
+                                </a>
+                                <div class="webui-popover in positionSet1">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">Renew FD</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="liEditApplicationRenw">
+                                <a href="ApplicationRenewalEdit" onclick="" code="MFEAPP00090">
+                                    <img src="images/edit_iconSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="../wwwroot/images/edit_iconSVG2.svg" alt="" class="tglMenuImg2" />Edit Application
+                                </a>
+                                <div class="webui-popover in positionSet1">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">Modify existing Renewal application before step 2.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="boxInrDiv boxInrDivLast boxInrDivEven">
+                        <img src="images/Num02.png" alt="02" class="boxInrNum" />
+                        <div class="boxInrCircle">
+                            <img src="images/Gn_ShortSVG2Hvr.svg" alt="" class="circleImg" />
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="boxInrLineBar borderTopRightRadius borderBottomRightRadius">
+                            STEP 2
+                        </div>
+                        <h5 class="boxInrStepTtl">
+                            Regenerate Completion
+                        </h5>
+                    </a>
+                    <div class="boxInrToggleDiv SetLeftPos2" id="TglDiv2Renw" style="display: none;">
+                        <ul class="UlAppOpt">
+                            <li>
+                                <a href="RenewalGenerateLink" onclick="" code="MFEAPP00090">
+                                    <img src="images/Gn_ShortSVG2Hvr.svg" alt="" class="tglMenuImg1" /><img src="images/Gn_ShortSVG1.svg" alt="" class="tglMenuImg2" />Regenerate Renewal Link
+                                </a>
+                                <div class="webui-popover in positionSet2">
+                                    <div class="arrow" style=""></div>
+                                    <div class="webui-popover-inner">
+                                        <div class="webui-popover-content">
+                                            <p><img src="images/Icon_Info1.svg" class="IconImgCls">Regenerate investment declaration acceptance and payment short URL.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="col-md-12 col-sm-12 col-xs-12 gradient-border-bottom"></div>
+
+      
+
+        <div class="col-md-12 col-sm-12 col-xs-12 ClsBoxCenter" id="IdInfoGraphicDiv">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="InfoBoxOutr">
+                    <img src="images/add_iconSVG3.svg" class="InfoBoxImg" alt="" id="svgId" />
+                    <h5 class="InfoBoxH5">Add Application</h5>
+                    <span class="InfoBoxSpan">Book a new FD for Fresh/Existing investor.</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="InfoBoxOutr">
+                    <img src="images/edit_iconSVG3.svg" class="InfoBoxImg" alt="" />
+                    <h5 class="InfoBoxH5">Edit Application</h5>
+                    <span class="InfoBoxSpan">Modify existing application before step 2.</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="InfoBoxOutr">
+                    <img src="images/copy_iconSVG3.svg" class="InfoBoxImg" alt="" />
+                    <h5 class="InfoBoxH5">Copy Application</h5>
+                    <span class="InfoBoxSpan">Create a copy of existing application.</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="InfoBoxOutr">
+                    <img src="images/view_iconSVG3.svg" class="InfoBoxImg" alt="" />
+                    <h5 class="InfoBoxH5">View Application</h5>
+                    <span class="InfoBoxSpan">View application in read-only mode.</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 AdjusBoxMargin1">
+                <div class="InfoBoxOutr">
+                    <img src="images/cancel_iconSVG3.svg" class="InfoBoxImg" alt="" />
+                    <h5 class="InfoBoxH5">Cancel Application</h5>
+                    <span class="InfoBoxSpan">To Cancel the application in case of discrepancy.</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 AdjusBoxMargin2">
+                <div class="InfoBoxOutr">
+                    <img src="images/Gn_ShortSVG3.svg" class="InfoBoxImg" alt="" />
+                    <h5 class="InfoBoxH5">Generate Short URL</h5>
+                    <span class="InfoBoxSpan">Regenerate investment declaration acceptance and payment short URL.</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 AdjusBoxMargin3">
+                <div class="InfoBoxOutr">
+                    <img src="images/Py_EntrySVG3.svg" class="InfoBoxImg" alt="" />
+                    <h5 class="InfoBoxH5">Payin Slip</h5>
+                    <span class="InfoBoxSpan">
+                        Select Bank and Branch details for Cheque submission.
+                        Generate/Print pay in slip for cheque submission.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+@section Scripts{
+    <script src="~/Default/js/default.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,143 @@
+﻿.content-wrapper .options {
+    display: none !important;
+}
+
+.UlSec01 {
+    width: 100%;
+    height: auto;
+    float: left;
+    border: 1px solid #ddd;
+    padding: 5px;
+    list-style: none;
+}
+
+    .UlSec01 li.LiInputSec {
+        width: 25%;
+        height: auto;
+        float: left;
+        margin: 5px 0 0 0;
+    }
+
+        .UlSec01 li.LiInputSec.LiInputSec2 {
+            width: calc(50% - 4px);
+            height: auto;
+            float: left;
+        }
+
+    .UlSec01 li.vertLine {
+        width: 2px;
+        float: left;
+        background-color: #a4a4a4;
+        height: 45px;
+    }
+
+.panel.panel-default .UlSec01 .form-control {
+    height: 24px !important;
+}
+
+.UlSec01 span.jq-dte {
+    padding: 2px 6px;
+}
+
+/*--------------new style-----------*/
+.panelCustmNew {
+    border-color: #ddd;
+    background-color: #dcdcdc;
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+    .panelCustmNew .panel-headingNW {
+        margin-bottom: 0;
+    }
+
+.panel.panel-default.panelCustmNew > .panel-body {
+    padding: 2px 0 15px 0;
+    float: left;
+    width: 100%;
+    max-height: 500px;
+    overflow: auto;
+}
+
+.panel.panel-default.panelCustmNew .form-group {
+    margin-bottom: 0;
+    font-size: 10.5px;
+}
+
+.panel.panel-default.panelCustmNew .panel-body .form-group .control-label {
+    width: 100%;
+    height: auto;
+    float: left;
+    text-align: left;
+    margin: 0;
+    line-height: 12px;
+    padding-right: 2px;
+    font-weight: 400;
+    font-size: 12.5px;
+    padding-right: 2px;
+}
+
+.panel.panel-default.panelCustmNew .UlSec01 .form-control {
+    height: 24px !important;
+    margin: 2px 0;
+    box-shadow: none;
+    border-color: #bbb;
+    font-size: 12.5px;
+    padding: 0px 5px;
+    border-radius: 0px;
+}
+.panel.panel-default.panelCustmNew .comnBtn2 {
+    margin-bottom: 5px;
+}
+.panel.panel-default.panelCustmNew .table.table-default {
+    margin-bottom: 0;
+}
+
+
+/**/
+.boxShadow {
+    box-shadow: 0px 0px 10px rgba(97, 84, 84, 0.37);
+    -webkit-box-shadow: 0px 0px 10px rgba(97, 84, 84, 0.37);
+    -moz-box-shadow: 0px 0px 10px rgba(97, 84, 84, 0.37);
+}
+
+.inner_box {
+    width: 100%;
+    height: auto;
+    float: left;
+    background: #fff;
+    padding: 15px;
+    margin: 0;
+}
+
+.inner_boxCont {
+    width: 100%;
+    height: auto;
+    float: left;
+    border: 6px double #000000;
+    padding: 20px;
+}
+
+    .inner_boxCont h5 {
+        width: 100%;
+        height: auto;
+        float: left;
+        text-decoration: underline;
+        margin: 0 0 10px 0;
+        font-size: 16px;
+    }
+
+    .inner_boxCont ol {
+        width: 100%;
+        height: auto;
+        float: left;
+        padding: 0 0 0 20px;
+    }
+
+        .inner_boxCont ol li {
+            width: 100%;
+            height: auto;
+            float: left;
+            padding: 5px 0;
+        }

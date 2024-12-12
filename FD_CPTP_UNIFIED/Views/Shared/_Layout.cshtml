@@ -1,0 +1,147 @@
+﻿
+@using FD_CPTP_UNIFIED;
+@{
+    AppLayoutModel app = new AppLayoutModel();
+    app = app.Get(Context);
+    string CDNRootPath = Startup.Configuration["AppCssCDNPath"].ToString();
+    string WA_FD_BTP = Startup.Configuration["WA_FD_BTP"].ToString();
+    string LOCK = Startup.Configuration["LOCK"].ToString();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" meta http-equiv="X-UA-Compatible" content="IE=edge" name="viewport">
+    <title id="MahindraFinance">Mahindra Finance Fixed Deposit Channel Partner Support Application</title>
+    <link rel="shortcut icon" href="@String.Concat(CDNRootPath,"favicon.ico")" type="image/x-icon" asp-append-version="true" />
+    <link rel="icon" href="@String.Concat(CDNRootPath,"favicon.ico")" type="image/x-icon" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"css/fonts.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"css/basic.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"css/applayout.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"css/modal.min.css")" asp-append-version="true" />
+
+    <style>
+     
+
+        .content-wrapper .options {
+            box-shadow: 0px 1px 4px #dbdbdb;
+        }
+    </style>
+
+    @RenderSection("Styles", required: false)
+
+</head>
+<body class="hold-transition fixed">
+    <div id="preloader">
+        <div class="overlay">
+            <p>
+                Loading
+                <span class="spinner"></span>
+            </p>
+        </div>
+    </div>
+    <div id="preloader2" style="display:none">
+        <div class="overlay">
+            <p>
+                Loading
+                <span class="spinner"></span>
+            </p>
+        </div>
+    </div>
+    <div class="wrapper">
+        <header class="main-header">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle -->
+                    <div class="navbar-header">
+                        <i class="demo-icon icon-menu navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">&#xf0c9;</i>
+                        <a class="navbar-brand">
+                            <img alt="MF-Logo" src="@String.Concat(CDNRootPath,"images/MF_Logo_Horizontal4.svg")" class="img-responsive" />
+                        </a>
+                    </div>
+
+                    <!-- Desktop Profile -->
+                    <div class="collapse navbar-collapse desktop-profile">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="user-detail dropdown" style="border: none !important;">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                    <label class="name">
+                                        Welcome <span id="lblUserName">@app.EntityName</span>
+                                    </label>
+                                    <div style="margin-top: 0px;">
+
+                                        <label id="lbl_SapCode" class="user-detail-style">
+                                            @app.SapCode
+                                        </label>
+                                        |
+                                        <label id="lbl_Branchcode" class="user-detail-style">
+                                            @app.BranchCode
+                                        </label>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a asp-controller="Default" asp-action="Index">
+                                    <label id="txtApplicationName">@app.AppName</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="lnkHome" asp-area="" asp-controller="Home" asp-action="Home"><i class="demo-icon icon-home">&#xe802;</i>Home</a>
+                            </li>
+                            <li>
+                                <a id="lnkLogout" asp-area="" asp-controller="Home" asp-action="LogOut"><i class="demo-icon icon-off">&#xe804;</i>Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Second Navigation -->
+            <nav class="navbar second-navbar">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!-- Mobile Profile -->
+                    <ul class="nav mobile-profile">
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Home"><i class="demo-icon icon-home">&#xe802;</i>Home</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="LogOut"><i class="demo-icon icon-off">&#xe804;</i>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="content-wrapper">
+            <div id="DV_MSG_CENTER" class="options" style="display:none">
+                <div class="alert alert-red">
+                    <p>
+                        Application Message Center :
+                        <label id="lblErrormsg" />
+                    </p>
+                </div>
+            </div>
+            @RenderBody()
+
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Modal_Success.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Modal_Error.cshtml");}
+
+        </div>
+        <footer class="main-footer">
+            <div class="container-fluid">
+                <p class="pull-left">&copy; 2018 Mahindra Finance</p>
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"js/jquery.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"js/app.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"js/applayout.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"js/modal.min.js")" asp-append-version="true"></script>
+    <script>
+           const LOCK = '@String.Concat(LOCK)';
+    </script>
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+</html>

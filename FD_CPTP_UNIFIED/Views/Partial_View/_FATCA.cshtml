@@ -1,0 +1,246 @@
+﻿
+<div class="col-md-12 col-sm-12 col-xs-12" style="border-top: 2px dashed #999;padding-top: 15px;margin-top: 10px;">
+    <div class="row">
+        <h4 class="SecHeaderTxt" style="padding-left:5px;">FATCA Details</h4>
+    </div>
+    <div class="row">
+
+        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+            <div class="form-group FormGrpCustm">
+                <label class="control-label">Nationality<span class="red-text">*</span></label>
+                <select id="ddlNationalityH" name="NATIONALITY" class="form-control F requiredFatcaDtl" errmsg="Nationality is required..!">
+                    <option value="select">Select</option>
+                </select>
+                <span class="red-text help-block"></span>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+            <div class="form-group FormGrpCustm">
+                <label class="control-label">Country Of Birth<span class="red-text">*</span></label>
+                <select id="ddlcountryBirthHead" name="COUNTRY" class="form-control requiredFatcaDtl" errmsg="Country Of Birth is required..!">
+                    <option value="select">Select</option>
+                </select>
+                <span class="red-text help-block"></span>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+            <div class="form-group FormGrpCustm">
+                <label class="control-label">City Of Birth<span class="red-text">*</span></label>
+                <input type="text" id="txtcityBirthHead" class="form-control requiredFatcaDtl uppercase  NoSpecialChar RemoveSpace charactor_only" errmsg="City Of Birth is required..!" />
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+            <div class="form-group FormGrpCustm">
+                <label class="control-label">Father Name</label>
+                <input type="text" id="txtFathernameHead" class="form-control uppercase  NoSpecialChar RemoveSpace charactor_only" errmsg="Father Name is required..!" />
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+            <div class="form-group FormGrpCustm">
+                <label class="control-label">Spouse Name</label>
+                <input type="text" id="txtSpousenameHead" class="form-control uppercase  NoSpecialChar RemoveSpace charactor_only" errmsg="Spouse Name is required..!" />
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+            <div class="form-group FormGrpCustm">
+                <label class="control-label">Occupation<span class="red-text">*</span></label>
+                <select id="ddloccupationHead" name="OCCUPATION" class="form-control requiredFatcaDtl" errmsg="Occupation is required..!">
+                    <option value="select">Select</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 InpOutrCls">
+            <div class="form-group FormGrpCustm">
+                <label class="control-label">CitizenShip</label>
+                <select id="ddlCitizenShip_CitizenShip" name="CITIZENSHIP" val-type="select" multiple="multiple" errmsg="Citizenship is required..!" class="form-control requiredFatcaDtl">
+                    <option value="select">Select</option>
+                </select>
+                <span id="errorCitizenShip_Header" class="help-block text-danger"></span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@*<div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls">
+        <button type="button" id="btnOpenDetailModel" class="comnBtn2" tabindex="35" style="margin:0;">Add FATCA Details</button>
+    </div>*@
+
+<div id="DV_FATCA_DETAILS">
+    <h4 class="SecHeaderTxt" style="padding-left:5px;">Detail Entry</h4>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Country of Tax<span class="red-text">*</span></label>
+            <select id="ddlCountryOfTax" name="COUNTRY_OF_TAX" val-type="select" class="form-control F fatca" errmsg="Country of Tax is required..!">
+                <option value="select">Select</option>
+            </select>
+            <span id="errorCountry" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Tax Identification Type<span class="red-text">*</span></label>
+            <select id="ddlTaxIndentityType" name="TAX_IDENTIFICATION_TYPE" class="form-control F fatca " errmsg="TaxIdentification Type is required..!" val-type="select">
+                <option value="select">Select</option>
+            </select>
+            <span id="errorTaxIndentityType" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Tax Identification No<span class="red-text">*</span></label>
+            <input type="text" id="txttaxIdentityNo" class="form-control F NoSpecialChar fatca number_only" errmsg="Tax Identification Number is required..!" val-type="text">
+            <span id="errortaxIdentityNo" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm SearchDate" id="DobSearch">
+            <label class="control-label">TRC Expiry Date<span class="red-text">*</span></label>
+            <input type="text" id="txtexpTRCDate" name="TRC_EXP_DATE" val-type="text" required regex="" errmsg="TRC Expiry Date is required..!" class="form-control D_T_E fatca">
+            <span id="errorexpTRCDate" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Address Type<span class="red-text">*</span></label>
+            <select id="ddlAddressType" name="ADDRESS_TYPE" class="form-control F fatca address" errmsg="Address Type is required..!" val-type="select">
+                <option value="select">Select</option>
+
+            </select>
+            <span id="errorAddressType" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Address Line 1<span class="red-text">*</span></label>
+            <input type="text" id="txtFatcaAdd1" maxlength="40" rows="2" val-type="text" errmsg="Address1 is required..!" class="form-control uppercase F NoSpecialChar TextAreaInput fatca address RemoveSpace" aria-autocomplete="none" />
+            <span id="errorAddress1" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Address Line 2<span class="red-text">*</span></label>
+            <input type="text" id="txtFatcaAdd2" rows="2" maxlength="40" val-type="text" class="form-control F NoSpecialChar TextAreaInput fatca address uppercase RemoveSpace" errmsg="Address2 is required..!" aria-autocomplete="none" />
+            <span id="errorAddress2" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Landmark</label>
+            <input type="text" id="txtFatcaLandmark" rows="2" val-type="text" maxlength="40" class="form-control F NoSpecialChar TextAreaInput fatca uppercase RemoveSpace" errmsg="Landmark is required..!" aria-autocomplete="none" />
+            <span id="errorLandmark" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">State<span class="red-text">*</span></label>
+            <select id="ddlFatcaState" class="form-control F fatca" val-type="ddlModalDetal" errmsg="State is required..!"></select>
+            <span id="errorStateBind" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">City<span class="red-text">*</span></label>
+            <input type="text" id="txtFatcaCity" maxlength="10" class="form-control F NoSpecialChar fatca charactor_only uppercase RemoveSpace" val-type="text" errmsg="City is required..!">
+            <span id="errorCity" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Postal Code<span class="red-text">*</span></label>
+            <input type="text" id="txtFatcaPostalcode" maxlength="7" class="form-control F NoSpecialChar RemoveSpace fatca" errmsg="Postal Code is required..!" val-type="txtModalDetal">
+            <span id="errorPostalcode" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Primary STD Code</label>
+            <input type="text" id="txtSTDCodePrimary" maxlength="7" class="form-control F NoSpecialChar number_only RemoveSpace" errmsg="STD Code is required..!" val-type="txtModalDetal">
+            <span id="errorSTDCodePrimary" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Primary Telephone No</label>
+            <input type="text" maxlength="10" id="txtTelephoneNumberPrimary" class="form-control F NoSpecialChar RemoveSpace number_only " errmsg="Primary Telephone Number is required..!" val-type="txtModalDetal" />
+            <span id="errorTelephoneNumberPrimary" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Primary Mobile no<span class="red-text">*</span></label>
+            <input type="text" id="txtMobileNumberPrimary" name="MOBILE" maxlength="10" class="form-control F fatca NoSpecialChar RemoveSpace number_only mobileF" errmsg="Primary Mobile Number is required..!" val-type="txtModalDetal" />
+            <span class="errorbox" style="position: absolute; top: 3px; left: 166px;display:none"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Other STD Code</label>
+            <input type="text" id="txtSTDCodeOther" class="form-control F NoSpecialChar number_only RemoveSpace" errmsg="STD Code is required..!" val-type="txtModalDetal" />
+            <span id="errorSTDCodeOther" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Other Telephone No</label>
+            <input type="text" maxlength="18" id="txtTelephoneNumberOther" class="form-control F NoSpecialChar number_Only RemoveSpace " errmsg="Telephone Number is required..!" val-type="txtModalDetal" />
+            <span id="errorTelephoneNumberOther" class="help-block text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+        <div class="form-group FormGrpCustm">
+            <label class="control-label">Other Mobile no</label>
+            <input type="text" id="txtMobileNumberOther" name="MOBILE" maxlength="10" class="form-control F NoSpecialChar number_only RemoveSpace mobileF " errmsg="Mobile Number is required..!" val-type="txtModalDetal" />
+            <span class="errorbox" style="position: absolute; top: 3px; left: 166px;display:none"></span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls">
+        <button type="button" id="btnBind" class="comnBtn BIND_DETAIL">Add Detail</button>
+        <button type="button" id="btnFatacClear" class="comnBtn CLEAR_DETAIL">Clear</button>
+    </div>
+</div>
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+        <div class="table-responsive">
+            <table id="tblDetailList" class="table table-default">
+                <thead>
+                    <tr class="tbl_header">
+                        <th style="display:none"> <input type="hidden" id="currentRow" /></th>
+                        <th colspan="2" class="tbl_FstHrd01">Action</th>
+                        <th rowspan="2">Country of Tax</th>
+                        <th colspan="2" class="tbl_FstHrd01">Tax Identification</th>
+                        <th rowspan="2">TRC Expiry Date</th>
+                        <th colspan="3" class="tbl_FstHrd01">Address</th>
+                        <th rowspan="2">Landmark</th>
+                        <th rowspan="2">State</th>
+                        <th rowspan="2">City</th>
+                        <th rowspan="2">Postal Code</th>
+                        <th colspan="3" class="tbl_FstHrd01">Primary</th>
+                        <th colspan="3" class="tbl_FstHrd01">Other</th>
+                    </tr>
+                    <tr class="tbl_header">
+                        <th style="display:none"></th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                        <th>Type</th>
+                        <th>Number</th>
+                        <th>Type</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>STD Code</th>
+                        <th>Telephone Number</th>
+                        <th>Mobile Number</th>
+                        <th>STD Code</th>
+                        <th>Telephone Number</th>
+                        <th>Mobile Number</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+

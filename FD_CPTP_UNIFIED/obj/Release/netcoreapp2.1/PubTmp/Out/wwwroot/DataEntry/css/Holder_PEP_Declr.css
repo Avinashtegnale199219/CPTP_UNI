@@ -1,0 +1,127 @@
+/*--toggle button ('PEP') section style start--*/
+.mainListBox {
+    border-radius: 0.25rem;
+    padding: 0;
+    margin: 0;
+}
+
+    .mainListBox .list-group-item {
+        display: flex;
+        align-items: center;
+        background-color: #f1f3f6;
+        padding: .50rem 1.50rem;
+        display: flex;
+        border: 1px solid rgba(0, 0, 0, .125);
+    }
+
+.list-group-item + .list-group-item {
+    border-top-width: 0;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.mainListBox .list-group-item .Dv_AnsToggle {
+}
+
+.mainListBox .list-group-item .span_Questn {
+    width: auto;
+    font-size: 1.30rem;
+    margin: 0 5px 1px 0;
+    font-weight: 600;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mainListBox .list-group-item .Dv_AnsToggle {
+    width: 80px;
+    height: 32px;
+    border: 2px solid #808080;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+    .mainListBox .list-group-item .Dv_AnsToggle .lblOutr {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+        width: 30px;
+        height: 28px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin: 0 0 0 0;
+        background-color: transparent;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 28px;
+        transition: background-color 0.4s;
+        transition: box-shadow 0.4s;
+    }
+
+        .mainListBox .list-group-item .Dv_AnsToggle .lblOutr:hover,
+        .mainListBox .list-group-item .Dv_AnsToggle .lblOutr:focus,
+        .mainListBox .list-group-item .Dv_AnsToggle .lblOutr:active {
+            box-shadow: 0 0 4px #000;
+        }
+
+        .mainListBox .list-group-item .Dv_AnsToggle .lblOutr:nth-child(1) {
+            left: 0px;
+            right: auto;
+            margin: 0 0 0 0;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .mainListBox .list-group-item .Dv_AnsToggle .lblOutr:nth-child(2) {
+            left: 50%;
+            right: auto;
+            margin: 0 0 0 -3px;
+            font-size: 0.975rem;
+            opacity: 0.7;
+            box-shadow: none !important;
+            width: 2px;
+        }
+
+        .mainListBox .list-group-item .Dv_AnsToggle .lblOutr:nth-child(3) {
+            left: auto;
+            right: 0px;
+            margin: 0 0 0 0;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .mainListBox .list-group-item .Dv_AnsToggle .lblOutr.active:nth-child(1) {
+            background-color: lightblue;
+            box-shadow: 0 0 4px #000;
+            opacity: 1;
+            width: 30px;
+        }
+
+        .mainListBox .list-group-item .Dv_AnsToggle .lblOutr.active:nth-child(2) {
+            background-color: #dddada;
+            opacity: 1;
+        }
+
+        .mainListBox .list-group-item .Dv_AnsToggle .lblOutr.active:nth-child(3) {
+            background-color: lightblue;
+            box-shadow: 0 0 4px #000;
+            opacity: 1;
+            width: 30px;
+        }
+
+        .mainListBox .list-group-item .Dv_AnsToggle .lblOutr input[type="radio"] {
+            visibility: hidden;
+            display: none;
+        }
+/*--toggle button ('PEP') section style end--*/

@@ -1,0 +1,68 @@
+﻿@using FD_CPTP_UNIFIED
+@{
+    string CDNRootPath = Startup.Configuration["AppCssCDNPath"].ToString();
+    string WA_FD_BTP = Startup.Configuration["WA_FD_BTP"].ToString();
+    string Min_Cheque_Date = Startup.Configuration["Min_Cheque_Date"].ToString();
+    string Max_Cheque_Date = Startup.Configuration["Max_Cheque_Date"].ToString();
+    string Min_Amount = Startup.Configuration["Min_Amount"].ToString();
+    string EntityCode = ViewBag.EntityCode;
+}
+
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/Jquery-autocomplete/Jqueryautocomplete.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/DataTable/jquery-dataTables.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/jquery-sumoselect/sumoselect.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"css/font-awesome.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/datetextentry/jquery-datetextentry.min.css")" asp-append-version="true" />
+
+    <link asp-append-version="true" rel="stylesheet" href="~/ApplicationAdd/ApplicationAdd.min.css" />
+}
+
+<div class="container">
+    <div class="mainBodyOutr">
+
+        @{await Html.RenderPartialAsync("~/Views/Partial_View/_Header.cshtml");}
+        @{await Html.RenderPartialAsync("~/Views/Partial_View/_Stepper.cshtml");}
+
+        <div class="tab-content NavTabsCont" id="allTabsContainer">
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab1.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab2.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab3.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab4.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab5.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab6.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab7.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab8.cshtml");}
+        </div>
+    </div>
+</div>
+
+@{await Html.RenderPartialAsync("~/Views/Partial_View/_Modal_View_Document.cshtml");}
+
+@section Scripts{
+    <script>
+
+        var State = '@ViewBag.State';
+        var Status = '@ViewBag.Status';
+        var WA_FD_BTP = '@String.Concat(WA_FD_BTP)';
+        var Min_Cheque_Date = '@String.Concat(Min_Cheque_Date)';
+        var Max_Cheque_Date = '@String.Concat(Max_Cheque_Date)';
+        var Min_Amount = '@String.Concat(Min_Amount)';
+        var PaymentMode = '@ViewBag.PaymentMode';
+
+    </script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/datetextentry/jquery-datetextentry.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/DataTable/jquery-dataTables.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/jquery-sumoselect/jquery-sumoselect.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/Jquery-autocomplete/Jqueryautocomplete.min.js")" asp-append-version="true"></script>
+
+    <script asp-append-version="true" src="~/ApplicationAdd/ApplicationAdd.min.js"></script>
+
+
+}
+
+
+
+
+
+

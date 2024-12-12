@@ -1,0 +1,114 @@
+﻿
+<input type="hidden" id="hdnMobilisationMode" />
+<div class="col-md-1 col-sm-2 col-xs-12 InpOutrCls NAME">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Prefix<span class="red-text">*</span></label>
+        <select id="ddlTitle" name="TITLE" class="form-control HOLD_DTL">
+            <option value="select">Select</option>
+        </select>
+    </div>
+</div>
+<div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls NAME">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">First Name<span class="red-text">*</span></label>
+        <input type="text" id="txtFName" maxlength="30" class="form-control HOLD_DTL NoSpecialChar charactor_only uppercase RemoveSpace">
+    </div>
+</div>
+<div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls NAME">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Middle Name</label>
+        <input type="text" id="txtMName" maxlength="30" class="form-control HOLD_DTL NoSpecialChar charactor_only uppercase RemoveSpace">
+    </div>
+</div>
+<div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls NAME">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Last Name</label>
+        <input type="text" id="txtLName" maxlength="30" class="form-control HOLD_DTL NoSpecialChar charactor_only uppercase RemoveSpace">
+    </div>
+</div>
+<div class="col-md-1 col-sm-2 col-xs-12 InpOutrCls IND">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Gender<span class="red-text">*</span></label>
+        <select id="ddlGender" name="GENDER" class="form-control HOLD_DTL">
+            <option value="select">Select</option>
+        </select>
+    </div>
+</div>
+<div id="DV_DOB" class="col-md-2 col-sm-2 col-xs-12 InpOutrCls ">
+    <div class="form-group FormGrpCustm " id="">
+        <label class="control-label">DOB<span class="red-text">*</span></label>
+        <input type="text" id="txtDOB" class="form-control  D_T_E HOLD_DTL">
+    </div>
+</div>
+@*<div class="clearfix" style="clear:both;"></div>*@
+<div id="DV_PAN" class="col-md-2 col-sm-2 col-xs-12 InpOutrCls ">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">PAN<span class="red-text">*</span></label>
+        <input type="text" id="txtPAN" maxlength="10" name="PAN" class="form-control HOLD_DTL NoSpecialChar  uppercase RemoveSpace" onCopy="return false" onPaste="return false">
+        <span class="errorbox" style="display:none"></span>
+    </div>
+</div>
+<div id="DV_CKYCNumber" class="col-md-2 col-sm-2 col-xs-12 InpOutrCls ">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">CKYC Number</label>
+        <input type="text" id="txtCKYCNumber" maxlength="14" name="" class="form-control HOLD_DTL NoSpecialChar number_only uppercase RemoveSpace">
+    </div>
+</div>
+<div class="col-md-1 col-sm-2 col-xs-12 InpOutrCls IND">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Prefix</label>
+        <select id="ddlFatherTitle" name="TITLE" class="form-control HOLD_DTL">
+            <option value="select">Select</option>
+        </select>
+    </div>
+</div>
+<div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls IND">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Father's First Name</label>
+        <input type="text" id="txtFatherFName" maxlength="30" class="form-control HOLD_DTL NoSpecialChar charactor_only uppercase RemoveSpace charactor_only">
+    </div>
+</div>
+<div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls IND">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Father's Middle Name</label>
+        <input type="text" id="txtFatherMName" maxlength="30" class="form-control HOLD_DTL NoSpecialChar charactor_only uppercase RemoveSpace">
+    </div>
+</div>
+<div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls IND">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Father's Last Name</label>
+        <input type="text" id="txtFatherLName" maxlength="30" class="form-control HOLD_DTL NoSpecialChar charactor_only uppercase RemoveSpace">
+    </div>
+</div>
+<div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls GUARDIAN IND" style="display:none">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Guardian's PAN<span class="red-text">*</span></label>
+        <input type="text" id="txtGuardianPAN" name="PAN" maxlength="10" class="form-control HOLD_DTL NoSpecialChar uppercase RemoveSpace">
+    </div>
+</div>
+<div class="col-md-1 col-sm-2 col-xs-12 InpOutrCls GUARDIAN IND" style="display:none">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Prefix<span class="red-text">*</span></label>
+        <select id="ddlGuardianTitle" name="TITLE" class="form-control HOLD_DTL uppercase">
+            <option value="select">Select</option>
+        </select>
+    </div>
+</div>
+<div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls GUARDIAN IND" style="display:none">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Guardian's First Name<span class="red-text">*</span></label>
+        <input type="text" id="txtGuardianFName" maxlength="30" class="form-control HOLD_DTL NoSpecialChar charactor_only uppercase RemoveSpace charactor_only">
+    </div>
+</div>
+<div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls GUARDIAN IND" style="display:none">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Guardian's Middle Name</label>
+        <input type="text" id="txtGuardianMName" maxlength="30" class="form-control HOLD_DTL NoSpecialChar charactor_only uppercase RemoveSpace">
+    </div>
+</div>
+<div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls GUARDIAN IND" style="display:none">
+    <div class="form-group FormGrpCustm">
+        <label class="control-label">Guardian's Last Name</label>
+        <input type="text" id="txtGuardianLName" maxlength="30" class="form-control HOLD_DTL NoSpecialChar charactor_only uppercase RemoveSpace">
+    </div>
+</div>

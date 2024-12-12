@@ -1,0 +1,283 @@
+﻿<div id="DV_STEP7" class="tab-container tab-pane" data-tab-index="7" style="display:none;">
+    <div class="panel-heading panel-headingNW">
+        <i class="fa fa-upload head-icon" aria-hidden="true"></i> Upload Documents
+    </div>
+    <div id="DV_APPL_UPLOAD" class="col-md-12 col-sm-12 col-xs-12">
+        <div class="row1">
+            <div class="row">
+                <h4 class="SecHeaderTxt" style="padding-left:20px;">Application Form Upload</h4>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Browse<span id="spnApplFormUpload" class="red-text">*</span></label>
+                    <input type="file" id="flvApplicationFormUpload" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <button type="button" id="btnUploadApplicationForm" class="comnBtn">Upload</button>
+            </div>
+        </div>
+    </div>
+    <div class="height5px"></div>
+    <div class="height5px"></div>
+    <div class="height5px"></div>
+    <div id="DV_HOLDER_DOC_UPLOAD" class="col-md-12 col-sm-12 col-xs-12">
+        <div class="row1">
+            <div class="row">
+                <h4 class="SecHeaderTxt" style="padding-left:20px;">Holder KYC Documents Upload</h4>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Holder Type<span class="red-text">*</span></label>
+                    <select id="ddlDocHolderType" class="form-control">
+                        <option value="select">Select</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Doc Type/Doc Sub Type<span class="red-text">*</span></label>
+                    <select id="ddlDocType" class="form-control">
+                        <option value="select">Select</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Browse<span class="red-text">*</span></label>
+                    <input type="file" id="flvDocUpload" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="col-md-6 col-sm-6 form-group FormGrpCustm AADHAAR_SUFFIX" style="display:none">
+                    <label class="control-label">Aadhaar Suffix<span class="red-text">*</span></label>
+                    <input type="text" id="txtSuffix" class="form-control" maxlength="4">
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <button type="button" id="btnUpload" class="comnBtn">Upload</button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="row1">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="table-responsive">
+                        <table id="tblOVDList" class="table table-default">
+                            <thead>
+                                <tr>
+                                    <th>Holder Type</th>
+                                    <th>Doc Type</th>
+                                    <th>Doc Sub Type</th>
+                                    <th>OVD Ref. No.</th>
+                                    <th>OVD Expiry Date</th>
+                                    <th>View</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody class="clear_tbody"><tr class="empty_table"><td colspan="7">No Records Found..!</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .divDeclrOutr {
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin: 10px 0 0 0;
+                    text-align: center;
+                }
+
+                .pText1 {
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin: 0 0 10px 0;
+                    font-size: 14px;
+                    text-align: justify;
+                }
+
+                    .pText1 > .printText {
+                        font-weight: 600;
+                        border-bottom: 1px solid #333333;
+                        padding: 0 2px;
+                        margin: 0;
+                    }
+
+                .table-responsive > .table.DeclrTblAdj {
+                    margin-top: 10px;
+                }
+
+                    .table-responsive > .table.DeclrTblAdj > thead > tr > th:nth-child(1) {
+                        width: 5%;
+                        text-align: center;
+                    }
+
+                    .table-responsive > .table.DeclrTblAdj > thead > tr > th:nth-child(2) {
+                        width: 30%;
+                    }
+
+                    .table-responsive > .table.DeclrTblAdj > thead > tr > th:nth-child(3) {
+                        width: 15%;
+                    }
+
+                    .table-responsive > .table.DeclrTblAdj > thead > tr > th:nth-child(4) {
+                        width: 15%;
+                    }
+
+                    .table-responsive > .table.DeclrTblAdj > thead > tr > th:nth-child(5) {
+                        width: 20%;
+                    }
+
+                    .table-responsive > .table.DeclrTblAdj > thead > tr > th:nth-child(6) {
+                        width: 15%;
+                    }
+
+                    .table-responsive > .table.DeclrTblAdj > tbody > tr > td {
+                        text-align: center;
+                    }
+
+                        .table-responsive > .table.DeclrTblAdj > tbody > tr > td:nth-child(2) {
+                            text-align: left;
+                        }
+
+                .btnAddMember {
+                    margin: 0 0 20px 0;
+                    border-radius: 0;
+                    font-size: 12px;
+                    letter-spacing: 0.5px;
+                    -webkit-box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.2);
+                    box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.2);
+                    font-weight: 600;
+                }
+
+                    .btnAddMember > b {
+                        font-size: 14px;
+                    }
+
+                /*modal style*/
+                .InptClsAddMembr {
+                    padding: 4px;
+                    width: 100%;
+                    float: left;
+                }
+                /*modal style*/
+            </style>
+
+            <div id="DV_HUF_DEC" class="col-md-12 col-sm-12 col-xs-12 NIND" style="display:none">
+                <div class="row">
+                    <div class="divDeclrOutr">
+                        <p class="pText1">Dear Sir,</p>
+                        <p class="pText1">We, all the coparceners (members) detailed below of the Hindu Undivided Family having PAN No. <span class="printText" id="lblMemberPAN"></span> do hereby authorize Karta of the family @*Mr. <span class="printText" id="txtHUFName"></span>*@ to open/operate fixed deposit in the name of this HUF with you for & on behalf of this HUF and we state that operation/dealings/ transactions that are executed by the Karta with regard to the said fixed deposit/s and all his orders/deals shall be binding on the HUF & all its members jointly as well as severally.</p>
+                        <p class="pText1">We hereby authorize you to honour all instructions oral or written, given by him on behalf of the HUF from time to time and act upon it.</p>
+                        <p class="pText1">In the eventuality of change of Karta or, we shall inform you in writing.</p>
+                        @*<p class="pText1">The Specimen Signature of the Karta with HUF stamp is given below:</p>*@
+                        <div class="clearfix"></div>
+                        <div class="table-responsive">
+                            <table id="tblCoparceners" class="table table-default DeclrTblAdj">
+                                <thead>
+                                    <tr>
+                                        <th>Sr. No.</th>
+                                        <th>Name of the Member</th>
+                                        <th>Relationship with karta</th>
+                                        <th>Date of Birth</th>
+                                        <th>Mobile No</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="">
+                                    @*<tr class="">
+                                            <td><span>01</span></td>
+                                            <td><span>Popatlal Jivraj Shah</span></td>
+                                            <td><span>Karta Self</span></td>
+                                            <td><span>01/01/1950</span></td>
+                                            <td><span>9876543210</span></td>
+                                            <td><button type="button" class="comnBtn2" value="" style="margin:0">Delete</button></td>
+                                        </tr>
+                                        <tr class="">
+                                            <td><span>02</span></td>
+                                            <td><span>Priti Popatlal Shah</span></td>
+                                            <td><span>Wife of Karta</span></td>
+                                            <td><span>01/01/1952</span></td>
+                                            <td><span>9876543210</span></td>
+                                            <td><button type="button" class="comnBtn2" value="" style="margin:0">Delete</button></td>
+                                        </tr>*@
+                                </tbody>
+                            </table>
+                        </div>
+                        <button type="button" id="btnHUFAddMember" class="btn btn-default btnAddMember"><b>+</b> ADD MEMBER</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="height5px"></div>
+            <div class="height5px"></div>
+            <div class="height5px"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls text-center">
+                <button type="button" id="btnCancel07" class="comnBtnSecondary">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" id="btnBack07" class="comnBtnSecondary">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" id="btnsubmit07" class="comnBtn2">Save</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Model_HUF_Add_Member" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-md" style="">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" id="">&times;</button>
+                    <h4 class="modal-title">Add Member Detail</h4>
+                </div>
+                <div class="modal-body" style="width: 100%;">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 text-center" style="margin-top: 10px;">
+                            <div class="col-md-6 col-sm-6 col-xs-12 InpOutrCls">
+                                <div class="form-group FormGrpCustm">
+                                    <label class="control-label">Name of the Member</label>
+                                    <input class="form-control uppercase" id="txtMemberName" type="text" />
+                                    <span class="errorbox" style="display:none"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 InpOutrCls">
+                                <div class="form-group FormGrpCustm">
+                                    <label class="control-label">Relationship with karta</label>
+                                    <input class="form-control uppercase" id="txtMemberRelation" type="text" />
+                                    <span class="errorbox" style="display:none"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 InpOutrCls">
+                                <div class="form-group FormGrpCustm">
+                                    <label class="control-label">Date of Birth</label>
+                                    <input class="form-control" id="txtMemberDOB" name="DATE" type="text" />
+                                    <span class="errorbox" style="display:none"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 InpOutrCls">
+                                <div class="form-group FormGrpCustm">
+                                    <label class="control-label">Mobile Number</label>
+                                    <input class="form-control uppercase" id="txtMemberMobile" name="MOBILE" type="text" />
+                                    <span class="errorbox" style="display:none"></span>
+                                </div>
+                            </div>
+                            <div class="height5px"></div>
+                            <button type="button" id="btnSaveMember" class="comnBtn2 btnSaveMember" onclick="SaveMember()">Save</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.1.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FD_CPTP_UNIFIED.BO\FD_CPTP_UNIFIED.BO.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DBHelper">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\DBHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Impersonate">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\Impersonate.dll</HintPath>
+    </Reference>
+    <Reference Include="MF_FD_ESARATHI_APP">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\MF_FD_ESARATHI_APP.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\System.Data.OracleClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

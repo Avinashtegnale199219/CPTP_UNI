@@ -1,0 +1,122 @@
+﻿<div id="DV_STEP2" class="tab-container tab-pane" data-tab-index="2" style="display:none;">
+    <div class="panel-heading panel-headingNW">
+        <i class="fa fa-cogs head-icon" aria-hidden="true"></i> Basic Configuration
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 PanelBGImg PanelBGImg2">
+        <div class="row1 row1WidAdjCls IND">
+
+            <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm form-check">
+                    <label class="control-label">Select Holding Pattern<span class="red-text">*</span></label>
+                    <div>
+                        <input type="checkbox" class="form-check-input" id="chkSHApplicable">
+                        <label class="form-check-label" for="exampleCheck1">Add Second Holder</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="form-check-input" id="chkTHApplicable" disabled>
+                        <label class="form-check-label" for="exampleCheck1">Add Third Holder</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="form-check-input" id="chkNomApplicable">
+                        <label class="form-check-label" for="exampleCheck1">Add Nominee</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--<%-- fatca code--------------------------- --%>-->
+        <div class="row1 row1WidAdjCls" id="dvAsk">
+            <div class="col-md-6 col-sm-6 col-xs-12 UlComnTitl">
+                <ul class="UlCls01">
+                    <li class="FstLiCls">Declared For</li>
+                    <li>Are you/joint holder a tax resident of a country other than India?</li>
+                    <li>Are you/joint holder a green card holder ?</li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 UlFstTitl">
+                <ul class="UlCls01 visible-xs">
+                    <li class="FstLiCls">Declared For</li>
+                    <li>Are you/joint holder a tax resident of a country other than India?</li>
+                    <li>Are you/joint holder a green card holder ?</li>
+                </ul>
+                <ul class="UlCls02">
+                    <li class="FstLiCls">Investor</li>
+                    <li>
+                        <button type="button" id="btnsldFatca" class="btn btn-toggle" >
+                            <span class="btn-toggleOff">NO</span>
+                            <div class="handle"></div>
+                            <span class="btn-toggleOn">YES</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" id="btnsldGreen" class="btn btn-toggle" >
+                            <span class="btn-toggleOff">NO</span>
+                            <div class="handle"></div>
+                            <span class="btn-toggleOn">YES</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 UlSndTitl secondholdercls" style="display:none">
+                <ul class="UlCls01 visible-xs">
+                    <li class="FstLiCls">Declared For</li>
+                    <li>Are you/joint holder a tax resident of a country other than India?</li>
+                    <li>Are you/joint holder a green card holder ?</li>
+                </ul>
+                <ul class="UlCls02">
+                    <li class="FstLiCls">Second Holder</li>
+
+                    <li>
+                        <button type="button" id="btnSHsldFatca" class="btn btn-toggle" >
+                            <span class="btn-toggleOff">NO</span>
+                            <div class="handle"></div>
+                            <span class="btn-toggleOn">YES</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" id="btnSHsldGreen" class="btn btn-toggle" >
+                            <span class="btn-toggleOff">NO</span>
+                            <div class="handle"></div>
+                            <span class="btn-toggleOn">YES</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 UlThrdTitl thirdholdercls" style="display:none">
+                <ul class="UlCls01 visible-xs">
+                    <li class="FstLiCls">Declared For</li>
+                    <li>Are you/joint holder a tax resident of a country other than India?</li>
+                    <li>Are you/joint holder a green card holder ?</li>
+                </ul>
+                <ul class="UlCls02">
+                    <li class="FstLiCls">Third Holder</li>
+                    <li>
+                        <button type="button" id="btnTHsldFatca" class="btn btn-toggle" >
+                            <span class="btn-toggleOff">NO</span>
+                            <div class="handle"></div>
+                            <span class="btn-toggleOn">YES</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" id="btnTHsldGreen" class="btn btn-toggle" >
+                            <span class="btn-toggleOff">NO</span>
+                            <div class="handle"></div>
+                            <span class="btn-toggleOn">YES</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--<%-- end of fatca code-------------------- --%>-->
+
+    </div>
+    <div class="height5px"></div>
+    <div class="height5px"></div>
+    <div class="height5px"></div>
+    <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls text-center row2 row1WidAdjCls2">
+        <button type="button" id="btnCancel02" class="comnBtnSecondary">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id="btnBack02" class="comnBtnSecondary">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id="btnsubmit02" class="comnBtn2">Save &amp; Continue</button>
+    </div>
+</div>

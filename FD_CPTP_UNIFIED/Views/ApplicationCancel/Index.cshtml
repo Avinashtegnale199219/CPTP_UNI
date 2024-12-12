@@ -1,0 +1,89 @@
+﻿@using FD_CPTP_UNIFIED
+@{
+    string CDNRootPath = Startup.Configuration["AppCssCDNPath"].ToString();
+    string WA_FD_BTP = Startup.Configuration["WA_FD_BTP"].ToString();
+    string Min_Cheque_Date = Startup.Configuration["Min_Cheque_Date"].ToString();
+    string Max_Cheque_Date = Startup.Configuration["Max_Cheque_Date"].ToString();
+    string Min_Amount = Startup.Configuration["Min_Amount"].ToString();
+    string EntityCode = ViewBag.EntityCode;
+}
+
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/DataTable/jquery-dataTables.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/Jquery-autocomplete/Jqueryautocomplete.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/jquery-sumoselect/sumoselect.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/datetextentry/jquery-datetextentry.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"css/font-awesome.min.css")" asp-append-version="true" />
+
+    <link asp-append-version="true" rel="stylesheet" href="~/ApplicationCancel/ApplicationCancel.min.css" />
+}
+
+
+<div class="container">
+    <div id="DV_APPL_CANCEL">
+        <div class="panel panel-default" id="pnlTable">
+            <div class="panel-heading panel-headingNW panelHeadingPosRel">
+                <label>Cancel Application</label>
+                <a class="ClsBackToDash" href="Default">
+                    <i class="fa fa-home" aria-hidden="true"></i> Back To Dashboard
+                </a>
+            </div>
+            <div class="panel-body" style="border: 1px solid #E31837;">
+                <div class="col-md-4 col-sm-4 col-xs-12 InpOutrCls">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">Application Number</label>
+                        <input type="text" id="txtSearchApplicationToCancel" class="form-control  uppercase" />
+
+                    </div>
+                </div>
+                <div class="col-md-1 col-sm-3 col-xs-12 InpOutrCls">
+                    <button type="button" id="btnSearchApplicationToCancel" class="comnBtn">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="DV_DATAENTRY" class="mainBodyOutr" style="display:none">
+
+        @{await Html.RenderPartialAsync("~/Views/Partial_View/_Header.cshtml");}
+
+
+        <div class="tab-content NavTabsCont" id="allTabsContainer">
+            <div class="row1">
+
+                @{await Html.RenderPartialAsync("~/Views/Partial_View/_SummaryView.cshtml");}
+                <div class="height5px"></div>
+                <div class="height5px"></div>
+                <div class="height5px"></div>
+                <div class="height5px"></div>
+                <div class="height5px"></div>
+                <div class="height5px"></div>
+                <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls text-center">
+                    @*<button type="button" id="btnCancel08" class="comnBtn2">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;*@
+                    <button type="button" id="btnBack08" class="comnBtn2">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" id="btnCancelApplication" class="comnBtn2">Cancel Application</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+
+        var State = '@ViewBag.State';
+        var Status = '@ViewBag.Status';
+        var WA_FD_BTP = '@String.Concat(WA_FD_BTP)';
+        var Min_Cheque_Date = '@String.Concat(Min_Cheque_Date)';
+        var Max_Cheque_Date = '@String.Concat(Max_Cheque_Date)';
+        var Min_Amount ='@String.Concat(Min_Amount)';
+    </script>
+
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/datetextentry/jquery-datetextentry.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/DataTable/jquery-dataTables.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/jquery-sumoselect/jquery-sumoselect.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/Jquery-autocomplete/Jqueryautocomplete.min.js")" asp-append-version="true"></script>
+
+    <script asp-append-version="true" src="~/ApplicationCancel/ApplicationCancel.min.js"></script>
+}

@@ -1,0 +1,368 @@
+﻿<style>
+    .errorbox {
+        position: absolute;
+        top: 42px !important;
+        left: 0 !important;
+        z-index: 2;
+        font-size: 12px;
+        /*display: inline-block;*/
+        font-family: sans-serif;
+        background-color: #f99;
+        border: 1px solid #666;
+        margin: 0;
+        padding: 1px 3px;
+        line-height: 125%;
+        white-space: nowrap;
+        -webkit-border-radius: 2px;
+        -ms-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+        .errorbox.successBox {
+            background-color: #4ac84a;
+        }
+</style>
+
+<div id="DV_STEP1" class="tab-container tab-pane" data-tab-index="1">
+
+    <div class="panel-heading panel-headingNW">
+        <i class="fa fa-id-card-o head-icon" aria-hidden="true"></i> Investor Information
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12 PanelBGImg">
+
+        <div class="row1 row1WidAdjCls" id="IdInvestorSearch" style="display:none;" >
+
+            @*<div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Depositor Category<span class="red-text">*</span></label>
+                    <select id="ddlDepositorsStatus" class="form-control">
+                        <option value="select">Select</option>
+                    </select>
+                    <span class="errorbox" style="display:none"></span>
+
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Search By<span class="red-text">*</span></label>
+                    <select id="ddlInvSearchBy" class="form-control"></select>
+                    <span class="errorbox" style="display:none"></span>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Search By Ref<span class="red-text">*</span></label>
+                    <input type="text" id="txtSearchRefNo" class="form-control uppercase" maxlength="40">
+                    <span class="errorbox" style="display:none"></span>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm SearchDate" id="DobSearch">
+                    <label class="control-label">DOB</label>
+                    <input type="text" id="txtSearchDOB" class="form-control D_T_E">
+                    <span class="errorbox" style="display:none"></span>
+                </div>
+            </div>
+            <div class="clrfixCustm"></div>
+            <div class="col-md-1 col-sm-3 col-xs-12 InpOutrCls">
+                <button type="button" id="btnInvSearch" class="comnBtn">Search</button>
+            </div>
+            <div class="col-md-12 col-sm-4 col-xs-12 InpOutrCls textCenterAbove992">
+                <div class="form-group FormGrpCustm" id="addfreshInv1" style="">
+                    <label class="control-label">&nbsp;</label>
+                    <a class="AddFreshInvCls" id="btnfreshcutomer" style="display:none">
+                        <img src="~/images/AddInvestor.png" style="" width="22" height="22">
+                        Add as a Fresh Investor
+                    </a>
+                </div>
+            </div>*@
+
+        </div>
+
+        <div class="row1 row1WidAdjCls" id="IdInvestorInfo" style="display: none;">
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+
+                <div class="row">
+
+                    <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls">
+                        <div class="form-group FormGrpCustm">
+                            <label class="control-label">
+                                Application Type<span class="red-text">*</span>
+                            </label>
+                            <div>
+                                <label class="radio-inline"><input id="rdoPhysical" type="radio" name="ApplicationType" value="PHYSICAL">Physical</label>
+                                <label class="radio-inline"><input id="rdoDigital" type="radio" name="ApplicationType" value="DIGITAL">Digital</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls">
+                        <div class="form-group FormGrpCustm">
+                            <label class="control-label">Depositor Category<span class="red-text">*</span></label>
+                            <select id="ddlDepositorsStatus" class="form-control">
+                                <option value="select">Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls" style="margin: 0;"></div>
+
+                    <div id="DV_FH_CKYC_SEARCH">
+
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Search By<span class="red-text">*</span></label>
+                                <select id="ddl_CKYC_SearchBy" class="form-control">
+                                    <option value="select">Select</option>
+                                    <option value="CKYC">CKYC Number</option>
+                                    <option value="PAN">PAN</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls Width992_1199">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Search By Ref<span class="red-text">*</span></label>
+                                <input type="text" id="txt_CKYC_SearchByRef" class="form-control uppercase">
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls" style="/*min-height:40px;*/">
+                            <div class="form-group FormGrpCustm SearchDate" id="DobSearch1">
+                                <label class="control-label">DOB</label>
+                                <input type="text" id="txt_CKYC_SearchDOB" name="SEARCH_DOB" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                            <button type="button" id="btn_CKYC_SearchByCersai" class="comnBtn">Search By Cersai</button>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls" style="text-align: center;">
+                            <label class="control-label">&nbsp;</label>
+                            <a class="AddFreshInvCls" id="btnFHAddManually" style="display:none">
+                                <img src="~/images/AddInvestor.png" style="" width="22" height="22">
+                                Add as a Fresh Investor
+                            </a>
+                        </div>
+
+                    </div>
+
+                    @*<div class="clearfix"></div>*@
+                    <div id="DV_INV_DETAILS" style="display:none">
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls Width992_1199">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Phy App No.<span class="red-text">*</span></label>
+                                <input type="text" id="txtPhysicalApplNo" value="00000000" class="form-control uppercase FO_DTLS" required>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Prefix<span class="red-text">*</span></label>
+                                <select id="ddlInvtitle" name="TITLE" class="form-control FO_DTLS" required>
+                                    <option value="select">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls BoxSizeDouble" id="DivInvFirstName">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">First Name<span class="red-text">*</span></label>
+                                <input type="text" id="txtInvFirstName" maxlength="30" class="form-control uppercase charactor_only FO_DTLS RemoveSpace" required>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Middle Name</label>
+                                <input type="text" id="txtInvMiddleName" maxlength="30" class="form-control uppercase charactor_only FO_DTLS">
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Last Name</label>
+                                <input type="text" id="txtInvLastName" maxlength="30" class="form-control uppercase charactor_only FO_DTLS">
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls IND">
+                            <div class="form-group FormGrpCustm SearchDate" id="DobSearch">
+                                <label class="control-label">DOB<span class="red-text">*</span></label>
+                                <input type="text" id="txtInvDOB" class="form-control  D_T_E FO_DTLS" required>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls NIND" style="display:none">
+                            <div class="form-group FormGrpCustm SearchDate" id="DobSearch">
+                                <label class="control-label">Incorporation Date<span class="red-text">*</span></label>
+                                <input type="text" id="txtInvDOI" class="form-control  test_color FO_DTLS">
+                            </div>
+                        </div>
+                        <div id="DV_PAN" class="col-md-2 col-sm-2 col-xs-12 InpOutrCls" style="">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">PAN<span class="red-text">*</span></label>
+                                <input type="text" id="txtInvPan" maxlength="10" class="form-control uppercase FO_DTLS NoSpecialChar RemoveSpace" onCopy="return false" onPaste="return false" required>
+                                <span class="errorbox" style="display:none"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls" style="">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">CKYC Number</label>
+                                <input type="text" id="txtInvCKYCNumber" maxlength="14" class="form-control uppercase FO_DTLS NoSpecialChar RemoveSpace number_only">
+                                <span class="errorbox" style="display:none"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Amount<span class="red-text">*</span></label>
+                                <input type="text" id="txtAmount"  maxlength="8" oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-control DisabledControl FO_DTLS number_only RemoveSpace" style="font-weight:600;font-size:16px;" readonly>
+                                <span class="errorbox" style="display:none"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Branch<span class="red-text">*</span></label>
+                                <select id="ddlBranch" class="form-control FO_DTLS" required>
+                                    <option value="select">Select</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-2 col-xs-12"></div>
+
+                            <div id="divChequeDtl" class="" style="display:none">
+
+                                <div class="col-md-4 col-sm-6 col-xs-12 InpOutrCls">
+                                    <div class="form-group FormGrpCustm">
+                                        <label class="control-label">Bank Name / Branch / MICR<span class="red-text">*</span></label>
+                                        <input type="text" id="txtInvDrawn_Bank_Search" class="form-control uppercase">
+                                        <input type="hidden" id="hdnDrawn_Bank_Name">
+                                        <input type="hidden" id="hdnBank_Branch_Name">
+                                        <input type="hidden" id="hdnBank_MICR">
+                                        <input type="hidden" id="hdnBank_NEFT">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                                    <div class="form-group FormGrpCustm">
+                                        <label class="control-label">Instrument No.<span class="red-text">*</span></label>
+                                        <input type="text" id="txtInvCheque_DD_No" class="form-control uppercase number_only" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="8">
+                                        <span class="errorbox" style="display:none"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls" style="min-height:40px;">
+                                    <div class="form-group FormGrpCustm SearchDate" id="">
+                                        <label class="control-label">Cheque Date<span class="red-text">*</span></label>
+                                        <input type="text" id="txtChequeDate" class="form-control D_T_E FO_DTLS">
+                                        <span class="errorbox" style="display:none"></span>
+                                    </div>
+                                </div>
+
+                                <div class="clrfixCustm"></div>
+
+                                <div class="col-md-4 col-sm-6 col-xs-12 InpOutrCls">
+
+                                    <div class="form-group FormGrpCustm">
+                                        <label class="control-label">HDFC Bank CMS Branch<span class="red-text">*</span></label>
+                                        <select id="ddlCMSBranch" class="form-control FO_DTLS">
+                                            <option value="select">Select</option>
+                                        </select>
+                                    </div>
+
+                                    <a id="lnkCMSBranchSearch" data-toggle="modal" data-target="#ModelCMSBranchSearch" class="AncSelectBtn1" style="display:none">Search Other HDFC Branch</a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                                <div class="form-group FormGrpCustm">
+                                    <label class="control-label">Mobile Number<span class="red-text">*</span></label>
+                                    <input type="text" id="txtMobile" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-control number_only FO_DTLS" required>
+                                    <span class="errorbox" style="display:none"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-4 col-xs-12 InpOutrCls">
+                                <div class="form-group FormGrpCustm">
+                                    <label class="control-label">Email ID<span class="red-text">*</span></label>
+                                    <input type="email" id="txtEmail" class="form-control uppercase FO_DTLS" required>
+                                    <span class="errorbox" style="display:none"></span>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                                <div class="form-group FormGrpCustm">
+                                    <label class="control-label">Sub Broker Code</label>
+                                    <input type="text" id="txtSubBrokerCode" class="form-control uppercase FO_DTLS">
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 col-sm-4 col-xs-12 InpOutrCls">
+                                <div class="form-group FormGrpCustm">
+                                    <label class="control-label">Remarks</label>
+                                    <input type="text" id="txtRemark" class="form-control uppercase FO_DTLS">
+                                </div>
+                            </div>
+
+                            <div class="col-md-8 col-sm-8 col-xs-12 InpOutrCls">
+                                <div class="form-group FormGrpCustm">
+                                    <label class="control-label">Amount in Words</label>
+                                    <label id="txtamountinwords" class="control-label" style="font-weight: 600;">
+
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    <div class="height5px"></div>
+                    <div class="height5px"></div>
+                    <div class="height5px"></div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls text-center">
+                        <button type="button" id="btnCancel01" class="comnBtnSecondary">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" id="btnBack01" class="comnBtnSecondary" style="display:none">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" id="btnsubmit01" class="comnBtn2">Save &amp; Continue</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@{await Html.RenderPartialAsync("~/Views/Partial_View/_Modal_CMS_LOC_Search.cshtml");}
+
+<div id="Model_FH_PAN_VERIFICATION_Msg" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+
+    <div class="modal-dialog modal-md" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            
+            <div class="modal-header ErrorModelHeader">
+                <button type="button" class="close" data-dismiss="modal" id="lblclose">&times;</button>
+                <h4 class="modal-title">Message Center</h4>
+            </div>
+
+            <div class="modal-body" style="width: 100%;">
+
+                <div id="dvPANMsg" class="ModelContDiv ErrorContent" style="text-align: center;margin: 15px 0;font-size: 14px;">
+                    Name as per CKYC and PAN records do not match.  Do you want to continue with CKYC record?
+                </div>
+
+                <div class="text-center" style="margin: 20px 0 0;">
+                    <button type="button" id="btn_FH_PAN_Match_No" class="comnBtnSecondary" data-dismiss="modal">No</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" id="btn_FH_PAN_Match_Yes" class="comnBtn2" data-dismiss="modal">Yes</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+

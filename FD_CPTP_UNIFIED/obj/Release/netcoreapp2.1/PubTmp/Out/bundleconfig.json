@@ -1,0 +1,356 @@
+﻿[
+
+  //Add CSS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationAdd/ApplicationAdd.min.css",
+    "inputFiles": [
+      "wwwroot/DataEntry/css/CustmCss3.css",
+      "wwwroot/DataEntry/css/ToggleCss.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  //Cancel CSS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationCancel/ApplicationCancel.min.css",
+    "inputFiles": [
+      "wwwroot/DataEntry/css/CustmCss3.css",
+      "wwwroot/DataEntry/css/ToggleCss.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  //Copy CSS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationCopy/ApplicationCopy.min.css",
+    "inputFiles": [
+      "wwwroot/DataEntry/css/CustmCss3.css",
+      "wwwroot/DataEntry/css/ToggleCss.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  //Edit CSS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationEdit/ApplicationEdit.min.css",
+    "inputFiles": [
+      "wwwroot/DataEntry/css/CustmCss3.css",
+      "wwwroot/DataEntry/css/ToggleCss.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  //View CSS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationView/ApplicationView.min.css",
+    "inputFiles": [
+      "wwwroot/DataEntry/css/CustmCss3.css",
+      "wwwroot/DataEntry/css/ToggleCss.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  //Renewal CSS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/RenewalRequestEntry/Renewal.min.css",
+    "inputFiles": [
+      "wwwroot/DataEntry/css/CustmCss3.css",
+      "wwwroot/css/data_entry_page_New.css",
+      "wwwroot/RenewalRequestEntry/Renewal.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  // Renewal CSS ==================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationRenewal/ApplicationRenewal.min.css",
+    "inputFiles": [
+      "wwwroot/DataEntry/css/CustmCss3.css",
+      "wwwroot/DataEntry/css/ToggleCss.css",      
+      "wwwroot/ApplicationRenewal/ApplicationRenewal2.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  //Renewal Edit CSS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationRenewalEdit/ApplicationRenewalEdit.min.css",
+    "inputFiles": [
+      "wwwroot/DataEntry/css/CustmCss3.css",
+      "wwwroot/DataEntry/css/ToggleCss.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+
+  //Add JS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationAdd/ApplicationAdd.min.js",
+    "inputFiles": [
+      "wwwroot/js/utility.js",
+      "wwwroot/DataEntry/js/Modal_CMS_LOC_Search.js",
+      "wwwroot/DataEntry/js/btp_autocomplete.js",
+      "wwwroot/DataEntry/js/_shared.js",
+      "wwwroot/DataEntry/js/AdditionalPurchase.js",
+      "wwwroot/js/stepper.js",
+      "wwwroot/DataEntry/js/Signzy_Services.js",
+      "wwwroot/DataEntry/js/CKYC_Search.js",
+      "wwwroot/DataEntry/js/Provisional_Holder_Search.js",
+      "wwwroot/DataEntry/js/step1.js",
+      "wwwroot/DataEntry/js/step2.js",
+      "wwwroot/DataEntry/js/step3.js",
+      "wwwroot/DataEntry/js/step4.js",
+      "wwwroot/DataEntry/js/step5.js",
+      "wwwroot/DataEntry/js/step6.js",
+      "wwwroot/DataEntry/js/step7.js",
+      "wwwroot/DataEntry/js/step8.js",
+      "wwwroot/DataEntry/js/Fatca.js",
+      "wwwroot/DataEntry/js/pageload.js",
+      "wwwroot/ApplicationAdd/ApplicationAdd.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  //Cancel JS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationCancel/ApplicationCancel.min.js",
+    "inputFiles": [
+      "wwwroot/js/utility.js",
+      "wwwroot/DataEntry/js/Modal_CMS_LOC_Search.js",
+      "wwwroot/DataEntry/js/btp_autocomplete.js",
+      "wwwroot/DataEntry/js/_shared.js",
+      "wwwroot/ApplicationCancel/ApplicationCancel.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  //Copy JS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationCopy/ApplicationCopy.min.js",
+    "inputFiles": [
+      "wwwroot/js/utility.js",
+      "wwwroot/DataEntry/js/Modal_CMS_LOC_Search.js",
+      "wwwroot/DataEntry/js/btp_autocomplete.js",
+      "wwwroot/DataEntry/js/_shared.js",
+      "wwwroot/DataEntry/js/Signzy_Services.js",
+      "wwwroot/DataEntry/js/AdditionalPurchase.js",
+      "wwwroot/DataEntry/js/CKYC_Search.js",
+      "wwwroot/DataEntry/js/Provisional_Holder_Search.js",
+      "wwwroot/js/stepper.js",
+      "wwwroot/DataEntry/js/step1.js",
+      "wwwroot/DataEntry/js/step2.js",
+      "wwwroot/DataEntry/js/step3.js",
+      "wwwroot/DataEntry/js/step4.js",
+      "wwwroot/DataEntry/js/step5.js",
+      "wwwroot/DataEntry/js/step6.js",
+      "wwwroot/DataEntry/js/step7.js",
+      "wwwroot/DataEntry/js/step8.js",
+      "wwwroot/DataEntry/js/Fatca.js",
+      "wwwroot/DataEntry/js/pageload.js",
+      "wwwroot/ApplicationCopy/ApplicationCopy.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  //Edit JS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationEdit/ApplicationEdit.min.js",
+    "inputFiles": [
+      "wwwroot/js/utility.js",
+      "wwwroot/DataEntry/js/Modal_CMS_LOC_Search.js",
+      "wwwroot/DataEntry/js/btp_autocomplete.js",
+      "wwwroot/DataEntry/js/_shared.js",
+      "wwwroot/DataEntry/js/AdditionalPurchase.js",
+      "wwwroot/DataEntry/js/CKYC_Search.js",
+      "wwwroot/DataEntry/js/Provisional_Holder_Search.js",
+      "wwwroot/DataEntry/js/Signzy_Services.js",
+      "wwwroot/js/stepper.js",
+      "wwwroot/DataEntry/js/step1.js",
+      "wwwroot/DataEntry/js/step2.js",
+      "wwwroot/DataEntry/js/step3.js",
+      "wwwroot/DataEntry/js/step4.js",
+      "wwwroot/DataEntry/js/step5.js",
+      "wwwroot/DataEntry/js/step6.js",
+      "wwwroot/DataEntry/js/step7.js",
+      "wwwroot/DataEntry/js/step8.js",
+      "wwwroot/DataEntry/js/Fatca.js",
+      "wwwroot/DataEntry/js/pageload.js",
+      "wwwroot/ApplicationEdit/ApplicationEdit.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  //View JS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationView/ApplicationView.min.js",
+    "inputFiles": [
+      "wwwroot/js/utility.js",
+      "wwwroot/DataEntry/js/Modal_CMS_LOC_Search.js",
+      "wwwroot/DataEntry/js/btp_autocomplete.js",
+      "wwwroot/DataEntry/js/_shared.js",
+      "wwwroot/DataEntry/js/AdditionalPurchase.js",
+      "wwwroot/js/stepper.js",
+      "wwwroot/DataEntry/js/step1.js",
+      "wwwroot/DataEntry/js/step2.js",
+      "wwwroot/DataEntry/js/step3.js",
+      "wwwroot/DataEntry/js/step4.js",
+      "wwwroot/DataEntry/js/step5.js",
+      "wwwroot/DataEntry/js/step6.js",
+      "wwwroot/DataEntry/js/step7.js",
+      "wwwroot/DataEntry/js/step8.js",
+      "wwwroot/DataEntry/js/Fatca.js",
+      "wwwroot/DataEntry/js/pageload.js",
+      "wwwroot/ApplicationView/ApplicationView.js",
+      "wwwroot/DataEntry/js/CKYC_Search.js",
+      "wwwroot/DataEntry/js/Provisional_Holder_Search.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  //Renewal JS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/RenewalRequestEntry/RenewalRequestEntry.min.js",
+    "inputFiles": [
+      "wwwroot/DataEntry/js/_shared.js",
+      "wwwroot/RenewalRequestEntry/RenewalRequestEntry.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  // Renewal JS ====================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationRenewal/ApplicationRenewal.min.js",
+    "inputFiles": [
+      "wwwroot/js/utility.js",
+      "wwwroot/DataEntry/js/Modal_CMS_LOC_Search.js",
+      "wwwroot/DataEntry/js/btp_autocomplete.js",
+      "wwwroot/DataEntry/js/_shared.js",
+      "wwwroot/DataEntry/js/AdditionalPurchase.js",
+      "wwwroot/js/stepper.js",
+      "wwwroot/DataEntry/js/Signzy_Services.js",
+      "wwwroot/DataEntry/js/CKYC_Search.js",
+      "wwwroot/DataEntry/js/Provisional_Holder_Search.js",
+      "wwwroot/RenewDataEntry/js/Renewstep1.js",
+      "wwwroot/RenewDataEntry/js/Renewstep2.js",
+      "wwwroot/RenewDataEntry/js/Renewstep3.js",
+      "wwwroot/RenewDataEntry/js/Renewstep4.js",
+      "wwwroot/RenewDataEntry/js/Renewstep5.js",
+      "wwwroot/RenewDataEntry/js/Renewstep6.js",
+      "wwwroot/RenewDataEntry/js/Renewstep7.js",
+      "wwwroot/RenewDataEntry/js/Renewstep8.js",
+      "wwwroot/DataEntry/js/Fatca.js",
+      "wwwroot/DataEntry/js/pageload.js",
+      "wwwroot/ApplicationRenewal/ApplicationRenewal.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  //Renewal Edit JS =================================================================================================================================================
+  {
+    "outputFileName": "wwwroot/ApplicationRenewalEdit/ApplicationRenewalEdit.min.js",
+    "inputFiles": [
+      "wwwroot/js/utility.js",
+      "wwwroot/DataEntry/js/Modal_CMS_LOC_Search.js",
+      "wwwroot/DataEntry/js/btp_autocomplete.js",
+      "wwwroot/DataEntry/js/_shared.js",
+      "wwwroot/DataEntry/js/AdditionalPurchase.js",
+      "wwwroot/js/stepper.js",
+      "wwwroot/DataEntry/js/Signzy_Services.js",
+      "wwwroot/DataEntry/js/CKYC_Search.js",
+      "wwwroot/DataEntry/js/Provisional_Holder_Search.js",
+      "wwwroot/RenewDataEntry/js/Renewstep1.js",
+      "wwwroot/RenewDataEntry/js/Renewstep2.js",
+      "wwwroot/RenewDataEntry/js/Renewstep3.js",
+      "wwwroot/RenewDataEntry/js/Renewstep4.js",
+      "wwwroot/RenewDataEntry/js/Renewstep5.js",
+      "wwwroot/RenewDataEntry/js/Renewstep6.js",
+      "wwwroot/RenewDataEntry/js/Renewstep7.js",
+      "wwwroot/RenewDataEntry/js/Renewstep8.js",
+      "wwwroot/DataEntry/js/Fatca.js",
+      "wwwroot/DataEntry/js/pageload.js",
+      "wwwroot/ApplicationRenewalEdit/ApplicationRenewalEdit.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  // Generate Short URL JS ====================================================================================================================================
+  {
+    "outputFileName": "wwwroot/GenerateShortURL/GenerateShortURL.min.js",
+    "inputFiles": [
+      "wwwroot/GenerateShortURL/GenerateShortURL.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  // Investment declaration status JS ====================================================================================================================================
+  {
+    "outputFileName": "wwwroot/InvestmentDeclarationStatus/InvestmentDeclarationStatus.min.js",
+    "inputFiles": [
+      "wwwroot/InvestmentDeclarationStatus/InvestmentDeclarationStatus.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  // Renewal Generate Short URL JS ====================================================================================================================================
+  {
+    "outputFileName": "wwwroot/GenerateRenewalShortURL/GenerateRenewalShortURL.min.js",
+    "inputFiles": [
+      "wwwroot/GenerateRenewalShortURL/GenerateRenewalShortURL.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  },
+  // Payinslip entry JS ====================================================================================================================================
+  {
+    "outputFileName": "wwwroot/PayinSlipEntry/PayinSlip.min.js",
+    "inputFiles": [
+      "wwwroot/AjaxErrorFunction.js",
+      "wwwroot/DataEntry/js/Modal_CMS_LOC_Search.js",
+      "wwwroot/DataEntry/js/Modal_CMS_LOC_Search_Gen.js",
+      "wwwroot/PayinSlipEntry/PayinSlip.js",
+      "wwwroot/PayinSlipGeneration/PayInSlipGeneration.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  }
+]

@@ -1,0 +1,236 @@
+﻿
+.panel.panel-default .form-control.PrefixAdj {
+    font-size: 11px;
+    padding: 0;
+}
+
+span.jq-dte {
+    font-size: 12.5px;
+    border-radius: 0;
+    border-color: #bbb;
+}
+
+.table.table-default {
+    width: calc(100% - 2px);
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    padding: 0 2px;
+    max-width: 73%;
+    width: auto;
+    margin-bottom: 5px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0.2em 0.5em;
+}
+
+/*.table.table-default > thead > tr > th {
+            width: 100px !important;
+        }*/
+
+.table.table-default > thead > tr > th.NameTH {
+    min-width: 150px;
+}
+
+.table.table-default > thead > tr > td,
+.table.table-default > thead > tr > th,
+.table.table-default > tbody > tr > td {
+    padding: 4px 2px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+
+.MainTableClass > tbody > tr.trWidth100 > td.FlvUpldOutrCls {
+    width: 25%;
+}
+
+    .MainTableClass > tbody > tr.trWidth100 > td.FlvUpldOutrCls > input {
+        width: 100%;
+        border: 1px solid #bbbbbb;
+    }
+
+.table.table-default.TblDocList,
+.table.table-default.TblDocList > thead,
+.table.table-default.TblDocList > thead > tr,
+.table.table-default.TblDocList > tbody,
+.table.table-default.TblDocList > tbody > tr {
+    width: 100%;
+    float: left;
+}
+
+    .table.table-default.TblDocList > thead > tr > th,
+    .table.table-default.TblDocList > tbody > tr > td {
+        text-align: center;
+    }
+
+    .table.table-default.TblDocList > tbody > tr > td {
+        min-height: 30.56px;
+    }
+
+        .table.table-default.TblDocList > thead > tr > th:first-child,
+        .table.table-default.TblDocList > tbody > tr > td:first-child {
+            width: 50%;
+            float: left;
+        }
+
+        .table.table-default.TblDocList > thead > tr > th:nth-child(2),
+        .table.table-default.TblDocList > tbody > tr > td:nth-child(2),
+        .table.table-default.TblDocList > thead > tr > th:nth-child(3),
+        .table.table-default.TblDocList > tbody > tr > td:nth-child(3) {
+            width: 25%;
+            float: left;
+        }
+
+    .table.table-default.TblDocList > tbody > tr.empty_table > td {
+        width: 100%;
+        min-height: initial;
+    }
+/**/
+.boxShadow {
+    box-shadow: 0px 0px 10px rgba(97, 84, 84, 0.37);
+    -webkit-box-shadow: 0px 0px 10px rgba(97, 84, 84, 0.37);
+    -moz-box-shadow: 0px 0px 10px rgba(97, 84, 84, 0.37);
+}
+
+.inner_box {
+    width: 100%;
+    height: auto;
+    float: left;
+    background: #fff;
+    padding: 15px;
+    margin: 0;
+}
+
+.inner_boxCont {
+    width: 100%;
+    height: auto;
+    float: left;
+    border: 6px double #000000;
+    padding: 20px;
+}
+
+    .inner_boxCont h5 {
+        width: 100%;
+        height: auto;
+        float: left;
+        text-decoration: underline;
+        margin: 0 0 10px 0;
+        font-size: 16px;
+    }
+
+    .inner_boxCont ol {
+        width: 100%;
+        height: auto;
+        float: left;
+        padding: 0 0 0 20px;
+    }
+
+        .inner_boxCont ol li {
+            width: 100%;
+            height: auto;
+            float: left;
+            padding: 5px 0;
+        }
+
+/*New css */
+.content-wrapper {
+    padding-top: 50px;
+}
+
+.options {
+    height: 30px;
+}
+
+.container-fluid.data_entry_head {
+    margin-top: 40px;
+}
+
+span.jq-dte input.jq-dte-day,
+span.jq-dte input.jq-dte-month {
+    width: 40px !important;
+}
+
+span.jq-dte input.jq-dte-year {
+    width: 50px !important;
+}
+
+
+
+/*new design start*/
+.panel-headingNW {
+    border-bottom: 1px solid transparent;
+    border-bottom-color: transparent;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 7px 15px;
+    border-color: #E31837;
+    background-color: #E31837;
+    margin-bottom: 0;
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    position: relative
+}
+
+.panel.panel-default .panel-headingNW label {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.ClsBackToDash {
+    height: 24px;
+    line-height: 24px;
+    background-color: #ffffff;
+    color: #E31837;
+    padding: 0 5px;
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.2);
+    box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.2);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 7px;
+    font-size: 12px;
+}
+
+    .ClsBackToDash.active,
+    .ClsBackToDash:focus,
+    .ClsBackToDash:hover {
+        background: #e6e7e8;
+        color: #000;
+        outline: 0;
+        text-decoration: none;
+        color: rgba(0,0,0,.87);
+    }
+
+.panel-heading .ClsBackToDash i {
+    color: #E31837;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    font-size: 14px;
+}
+
+.panel-heading .ClsBackToDash.active i,
+.panel-heading .ClsBackToDash:focus i,
+.panel-heading .ClsBackToDash:hover i {
+    color: #000000;
+}
+
+.panel.panel-default > .panel-body {
+    padding: 2px 0 15px 0;
+    float: left;
+}
+
+.panel-default {
+    float: left;
+    width: 100%
+}

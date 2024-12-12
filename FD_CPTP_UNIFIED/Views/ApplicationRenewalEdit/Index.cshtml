@@ -1,0 +1,200 @@
+﻿@using FD_CPTP_UNIFIED
+@{
+    string CDNRootPath = Startup.Configuration["AppCssCDNPath"].ToString();
+    string WA_FD_BTP = Startup.Configuration["WA_FD_BTP"].ToString();
+    string Min_Cheque_Date = Startup.Configuration["Min_Cheque_Date"].ToString();
+    string Max_Cheque_Date = Startup.Configuration["Max_Cheque_Date"].ToString();
+    string Min_Amount = Startup.Configuration["Min_Amount"].ToString();
+    string EntityCode = ViewBag.EntityCode;
+}
+
+
+@section Styles{
+
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/Jquery-autocomplete/Jqueryautocomplete.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/DataTable/jquery-dataTables.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/jquery-sumoselect/sumoselect.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"css/font-awesome.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/datetextentry/jquery-datetextentry.min.css")" asp-append-version="true" />
+
+    <link href="~/ApplicationRenewalEdit/ApplicationRenewalEdit.min.css" asp-append-version="true" rel="stylesheet" />
+}
+
+
+
+<div class="container">
+    <div id="DV_APPL_EDIT">
+        <div class="panel panel-default" id="pnlTable">
+            <div class="panel-heading  panel-headingNW panelHeadingPosRel">
+                <i class="fa fa-pencil-square-o head-icon" aria-hidden="true"></i> <label>Edit Application</label>
+                <a class="ClsBackToDash" href="Default">
+                    <i class="fa fa-home" aria-hidden="true"></i> Back To Dashboard
+                </a>
+            </div>
+            <div class="panel-body" style="border: 1px solid #E31837;">
+                <div class="row1" id="tblrow">
+                    <div class="table-responsive" style="overflow:auto;">
+                        <table class="table table-default" id="tblApplData">
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Application No</th>
+                                    <th>Application Date</th>
+                                    <th>Application Type</th>
+                                    <th>Name</th>
+                                    <th>DOB</th>
+                                    <th>Amount</th>
+                                    @*<th>Payment Mode</th>*@
+                                    <th>Mobile</th>
+                                    <th>Email</th>
+                                    <th>Created By</th>
+                                    @*<th>Created Date</th>*@
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="DV_DATAENTRY" class="mainBodyOutr" style="display:none">
+
+        <input type="hidden" id="hdnPrincAmount" name="name" value="" />
+        <input type="hidden" id="hdnMatuAmount" name="name" value="" />
+        <input type="hidden" id="hdnOldScheme" name="name" value="" />
+
+        <div class="InfoDiv01" id="IdInfoDiv" style="display: none;">
+            <style>
+                .InfoUlCls li {
+                    height: 33px;
+                }
+            </style>
+            <ul class="InfoUlCls">
+                <li class="">
+                    <span class="SpanCls1">Application Type</span>
+                    <span class="SpanCls2" id="lblApplicationType"></span>
+                </li>
+                <li class="liWidthAdj2">
+                    <span class="SpanCls1">Application Number</span>
+                    <span class="SpanCls2" id="lblApplicationNumber"></span>
+                    <input type="hidden" id="hdnApplicationNumber" value="" />
+                </li>
+                <li>
+                    <span class="SpanCls1">Depositor Category</span>
+                    <span class="SpanCls2" id="lblDepositorCategory"></span>
+                </li>
+                <li>
+                    <span class="SpanCls1">Broker Code</span>
+                    <span class="SpanCls2" id="lblBrokerCode"></span>
+                </li>
+                <li class="liWidthDouble">
+                    <span class="SpanCls1">Investor Name</span>
+                    <span class="SpanCls2" id="lblInvestorName"></span>
+                </li>
+                <li>
+                    <span class="SpanCls1">DOB</span>
+                    <span class="SpanCls2" id="lblDOB"></span>
+                </li>
+                <li>
+                    <span class="SpanCls1">PAN</span>
+                    <span class="SpanCls2" id="lblPAN"></span>
+                </li>
+                @*<li>
+                        <span class="SpanCls1">Mode of Payment</span>
+                        <span class="SpanCls2" id="lblModeOfPayment"></span>
+                    </li>*@
+                <li class="liWidthAdj1">
+                    <span class="SpanCls1">Amount</span>
+                    <span class="SpanCls2" id="lblAmount"></span>
+                </li>
+                <li class="liWidthAdj2">
+                    <span class="SpanCls1">Mobile Number</span>
+                    <span class="SpanCls2" id="lblMobileNumber"></span>
+                </li>
+                <li class="liWidthDouble">
+                    <span class="SpanCls1">Email ID</span>
+                    <span class="SpanCls2" id="lblEmailID"></span>
+                </li>
+                <li>
+                    <span class="SpanCls1">Folio Number</span>
+                    <span class="SpanCls2" id="lblFolioNumber"></span>
+                </li>
+                <li>
+                    <span class="SpanCls1">Existing FDR Number</span>
+                    <span class="SpanCls2" id="lblExistingFDRNumber"></span>
+                </li>
+                <li class="liWidthDouble">
+                    <span class="SpanCls1">Last Investment Date</span>
+                    <span class="SpanCls2" id="lblLastInvestmentDate"></span>
+                </li>
+            </ul>
+        </div>
+
+        @{await Html.RenderPartialAsync("~/Views/Partial_View/_Stepper.cshtml");}
+
+        <div class="tab-content NavTabsCont" id="allTabsContainer">
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_RenewTab1.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab2.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_RenewTab3.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab4.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab5.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab6.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab7.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab8.cshtml");}
+
+        </div>
+
+    </div>
+    <input type="hidden" id="HdnCustSeg_typeCode_SH" />
+    <input type="hidden" id="HdnCustSeg_typeCode_TH" />
+</div>
+
+<div id="ModelMessage" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content ModelCustmSucc">
+            <div class="modal-header SuccessModelHeader">
+                <button type="button" class="close" data-dismiss="modal" id="lblclose">&times;</button>
+                <h4 class="modal-title">Alert</h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <div id="dvModalMsg" class="ModelContDiv SuccessContent">
+
+                </div>
+
+                @*<div class="text-center">
+                        <button type="button" id="" class="comnBtn2" data-dismiss="modal">OK</button>
+                    </div>*@
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="" class="comnBtn3" data-dismiss="modal" onclick="Save()">OK</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@{await Html.RenderPartialAsync("~/Views/Partial_View/_Modal_View_Document.cshtml");}
+
+@section Scripts{
+    <script>
+
+        var State = '@ViewBag.State';
+        var Status = '@ViewBag.Status';
+        var WA_FD_BTP = '@String.Concat(WA_FD_BTP)';
+        var Min_Cheque_Date = '@String.Concat(Min_Cheque_Date)';
+        var Max_Cheque_Date = '@String.Concat(Max_Cheque_Date)';
+        var Min_Amount = '@String.Concat(Min_Amount)';
+          var PaymentMode = '';
+    </script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/datetextentry/jquery-datetextentry.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/DataTable/jquery-dataTables.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/jquery-sumoselect/jquery-sumoselect.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/Jquery-autocomplete/Jqueryautocomplete.min.js")" asp-append-version="true"></script>
+
+    <script src="~/ApplicationRenewalEdit/ApplicationRenewalEdit.min.js" asp-append-version="true"></script>
+
+}

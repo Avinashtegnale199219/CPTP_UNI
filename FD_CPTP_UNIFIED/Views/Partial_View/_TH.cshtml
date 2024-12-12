@@ -1,0 +1,97 @@
+﻿<input type="hidden" id="hdnTHSourceTableId" value="" />
+
+
+<div class="clearfix"></div>
+
+<div id="DV_TH_EDIT_AS_CKYC" class="col-md-12 col-sm-12 col-xs-12 InpOutrCls" style="display:none">
+    <div class="form-group FormGrpCustm form-check">
+        <div>
+            <input type="checkbox" class="form-check-input" id="chkTHEdit">
+            <label class="form-check-label" for="exampleCheck1">Edit as per CKYC</label>
+        </div>
+    </div>
+</div>
+
+
+
+@{await Html.RenderPartialAsync("~/Views/Partial_View/_HolderDetails.cshtml");}
+
+<div class="row">
+    <h4 class="SecHeaderTxt" style="padding-left:20px;">Address as per proof of address</h4>
+</div>
+<div id="DV_TH_P_ADDR" class="col-md-12 col-sm-12 col-xs-12 InpOutrCls">
+    <div class="row form-group FormGrpCustm form-check">
+        <div>
+            <input type="checkbox" class="form-check-input" id="chkIsTHAddrSameAsFH">
+            <label class="form-check-label" for="exampleCheck1">Same as First Holder</label>
+        </div>
+    </div>
+
+    @{await Html.RenderPartialAsync("~/Views/Partial_View/_Address.cshtml");}
+
+</div>
+<div class="row">
+    <h4 class="SecHeaderTxt" style="padding-left:20px;">More Details</h4>
+</div>
+<div id="DV_TH_MD" class="">
+    @{await Html.RenderPartialAsync("~/Views/Partial_View/_MoreDetails.cshtml");}
+</div>
+
+<div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls">
+    <div class="form-group FormGrpCustm form-check">
+        <label class="control-label">Other Address as per proof of address</label>
+        <div>
+            <input type="checkbox" class="form-check-input" id="chkIsTHAddrSameAsPermanent">
+            <label class="form-check-label" for="exampleCheck1">Mailing Address Same As Permanent Address</label>
+        </div>
+    </div>
+</div>
+
+<div id="DV_TH_M_ADDR" class="col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+        <h4 class="SecHeaderTxt" style="padding-left:5px;">Mailing Address as per proof of address</h4>
+    </div>
+    <div class="row">
+        @{await Html.RenderPartialAsync("~/Views/Partial_View/_Address.cshtml");}
+    </div>
+</div>
+
+
+<div class="col-md-6 col-sm-8 col-xs-12 InpOutrCls" id="TH_PEP">
+    <ul class="list-group mainListBox">
+        <li class="list-group-item">
+            <span class="span_Questn">Are you a politically exposed person (PEP)?</span>
+            <div class="Dv_AnsToggle">
+                <label class="lblOutr">
+                    <input type="radio" value="N" name="rdoTHPEP" />NO
+                </label>
+                <label class="lblOutr">
+                    <input type="radio" value="NA" name="rdoTHPEP" disabled />/
+                </label>
+                <label class="lblOutr">
+                    <input type="radio" value="Y" name="rdoTHPEP" />YES
+                </label>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <span class="span_Questn">Are you related to a PEP?</span>
+            <div class="Dv_AnsToggle">
+                <label class="lblOutr">
+                    <input type="radio" value="N" name="rdoTHPEPRelated" />NO
+                </label>
+                <label class="lblOutr">
+                    <input type="radio" value="NA" name="rdoTHPEPRelated" disabled />/
+                </label>
+                <label class="lblOutr">
+                    <input type="radio" value="Y" name="rdoTHPEPRelated" />YES
+                </label>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<!--Fatca Detail div-->
+<div id="DV_TH_FATCA" style="display:none">
+    @{await Html.RenderPartialAsync("~/Views/Partial_View/_FATCA.cshtml");}
+</div>

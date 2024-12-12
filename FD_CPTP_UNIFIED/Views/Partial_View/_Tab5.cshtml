@@ -1,0 +1,376 @@
+﻿<style>
+    .HeadDetail1 {
+        padding: 2px 15px;
+        margin-bottom: 0;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        font-size: 16px;
+        /*font-weight: 600;*/
+        text-align: left;
+        color: #383d41;
+        background-color: #e2e3e5;
+        border-color: #d6d8db;
+        float: left;
+        width: 100%;
+        background-color: transparent;
+        font-weight: normal;
+        /*font-family: 'Proxima Nova Lt';*/
+        font-family: Arial,Verdana,Tahoma;
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    .TopInfoLbl1 {
+        padding: 0;
+        margin: 0 5px 0 0;
+    }
+
+        .TopInfoLbl1 > span {
+            margin: 0 5px 0 0;
+            font-weight: 600;
+        }
+
+            .TopInfoLbl1 > span.SHHeader,
+            .TopInfoLbl1 > span.THHeader {
+                margin: 0 5px 0 0;
+                font-weight: 600;
+            }
+</style>
+<link href="~/dataentry/css/holder_pep_declr.css" rel="stylesheet" />
+<div id="DV_STEP5" class="tab-container tab-pane active" data-tab-index="5" style="display:none">
+    <div class="panel-heading panel-headingNW">
+        <i class="fa fa-user head-icon" aria-hidden="true"></i> Holder Information
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="row1">
+
+            <div id="" class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Holder Type<span class="red-text">*</span></label>
+                    <select id="ddlHolderType" class="form-control">
+                        <option value="01">Investor</option>
+                        <option value="02">Second Holder</option>
+                        <option value="03">Third Holder</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="DV_SH_HEAD" class="col-md-8 col-sm-8 col-xs-12 InpOutrCls" style="float:right;display:none">
+                <div class="HeadDetail1" id="">
+                    <label class="TopInfoLbl1 SHFolio">
+                        Second Holder's Folio Number -
+                        <span id="hdrSHFolioNo" class="SHHeader"></span> <span class="H_line">||</span>
+                    </label>
+                    <label class="TopInfoLbl1 SHFDR">
+                        Existing FDR Number -
+                        <span id="hdrSHExistingFDRNo" class="SHHeader"></span> <span class="H_line">||</span>
+                    </label>
+                    <label class="TopInfoLbl1 SHLastInvDate">
+                        Last Investment Date -
+                        <span id="hdrSHLastInvDate" class="SHHeader"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div id="DV_TH_HEAD" class="col-md-8 col-sm-8 col-xs-12 InpOutrCls" style="float:right;display:none">
+                <div class="HeadDetail1" id="">
+                    <label class="TopInfoLbl1 THFolio">
+                        Third Holder's Folio Number -
+                        <span id="hdrTHFolioNo" class="THHeader"></span> <span class="H_line">||</span>
+                    </label>
+                    <label class="TopInfoLbl1 THFDR">
+                        Existing FDR Number -
+                        <span id="hdrTHExistingFDRNo" class="THHeader"></span> <span class="H_line">||</span>
+                    </label>
+                    <label class="TopInfoLbl1 THLastInvDate">
+                        Last Investment Date -
+                        <span id="hdrTHLastInvDate" class="THHeader"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div id="DV_FH" class="HolderDtlFillDiv">
+                @{await Html.RenderPartialAsync("~/Views/Partial_View/_FH.cshtml");}
+            </div>
+
+            <div id="DV_SH" class="HolderDtlFillDiv" style="display:none">
+                <div class="clearfix"></div>
+
+                <div id="DV_PROV_SH" class="row1">
+                    <div id="IdProvNomineeDtl">
+                        <div class="col-md-6 col-sm-12 col-xs-12 InpOutrCls">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Provisional Holder<span class="red-text">*</span></label>
+                                <select id="ddlProvSH" class="form-control FO_DTLS">
+                                    <option value="select">Select</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-12 col-xs-12 InpOutrCls">
+                        <span class="OrClass">OR</span>
+                    </div>
+                    <div class="col-md-2 col-sm-12 col-xs-12 InpOutrCls InpOutrClsTextAlng">
+                        <div class="form-group FormGrpCustm">
+                            <label class="control-label" style="visibility:hidden;"><span class="red-text">*</span></label>
+                            <button type="button" id="btnAddNewExistingSH" class="comnBtn2" style="margin:0;">Add New Holder</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="DV_SH_SEARCH" style="display:none">
+                    @{await Html.RenderPartialAsync("~/Views/Partial_View/_SearchHolder.cshtml");}
+                </div>
+
+                <div class="row" id="DV_SH_CKYC_SEARCH" style="display:none;">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Search By<span class="red-text">*</span></label>
+                                <select id="ddl_SH_CKYC_SearchBy" class="form-control">
+                                    <option value="select">Select</option>
+                                    <option value="CKYC">CKYC Number</option>
+                                    <option value="PAN">PAN</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls Width992_1199">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Search By Ref<span class="red-text">*</span></label>
+                                <input type="text" id="txt_SH_CKYC_SearchByRef" class="form-control uppercase FO_DTLS">
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls" style="min-height:43px;">
+                            <div class="form-group FormGrpCustm SearchDate" id="DobSearch1">
+                                <label class="control-label">DOB</label>
+                                <input type="text" id="txt_SH_CKYC_Search_DOB" name="SEARCH_DOB" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls">
+                            <button type="button" id="btn_SH_CKYC_Search" class="comnBtn">Search By Cersai</button>
+                        </div>
+                        <div style="padding-top: 14px;" class="col-md-3 col-sm-4 col-xs-12 InpOutrCls">
+                            <a class="AddFreshInvCls" id="btnSHAddManually" style="display:none">
+                                <img src="~/images/AddInvestor.png" style="" width="22" height="22">
+                                Add as a Fresh Investor
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="DV_SH_DTLS" style="display:none">
+                    @{await Html.RenderPartialAsync("~/Views/Partial_View/_SH.cshtml");}
+
+                </div>
+            </div>
+
+            <div id="DV_TH" class="HolderDtlFillDiv" style="display:none">
+
+                <div class="clearfix"></div>
+
+                <div id="DV_PROV_TH" class="row1">
+                    <div id="IdProvNomineeDtl">
+                        <div class="col-md-6 col-sm-12 col-xs-12 InpOutrCls">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Provisional Holder<span class="red-text">*</span></label>
+                                <select id="ddlProvTH" class="form-control FO_DTLS">
+                                    <option value="select">Select</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-12 col-xs-12 InpOutrCls">
+                        <span class="OrClass">OR</span>
+                    </div>
+                    <div class="col-md-2 col-sm-12 col-xs-12 InpOutrCls InpOutrClsTextAlng">
+                        <div class="form-group FormGrpCustm">
+                            <label class="control-label" style="visibility:hidden;">Add<span class="red-text">*</span></label>
+                            <button type="button" id="btnAddNewExistingTH" class="comnBtn2" style="margin:0;">Add New Holder</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="DV_TH_SEARCH" style="display:none">
+                    @{await Html.RenderPartialAsync("~/Views/Partial_View/_SearchHolder.cshtml");}
+                </div>
+
+                <div class="row" id="DV_TH_CKYC_SEARCH" style="/*display:none;*/">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Search By<span class="red-text">*</span></label>
+                                <select id="ddl_TH_CKYC_SearchBy" class="form-control">
+                                    <option value="select">Select</option>
+                                    <option value="CKYC">CKYC Number</option>
+                                    <option value="PAN">PAN</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls Width992_1199">
+                            <div class="form-group FormGrpCustm">
+                                <label class="control-label">Search By Ref<span class="red-text">*</span></label>
+                                <input type="text" id="txt_TH_CKYC_SearchByRef" class="form-control uppercase FO_DTLS">
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 InpOutrCls" style="min-height:43px;">
+                            <div class="form-group FormGrpCustm SearchDate" id="DobSearch1">
+                                <label class="control-label">DOB</label>
+                                <input type="text" id="txt_TH_CKYC_Search_DOB" name="SEARCH_DOB" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls">
+                            <button type="button" id="btn_TH_CKYC_Search" class="comnBtn">Search By Cersai</button>
+                        </div>
+                        <div style="padding-top: 14px;" class="col-md-3 col-sm-4 col-xs-12 InpOutrCls">
+                            <a class="AddFreshInvCls" id="btnTHAddManually" style="display:none">
+                                <img src="~/images/AddInvestor.png" style="" width="22" height="22">
+                                Add as a Fresh Investor
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="DV_TH_DTLS" style="display:none">
+                    @{await Html.RenderPartialAsync("~/Views/Partial_View/_TH.cshtml");}
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="height5px"></div>
+    <div class="height5px"></div>
+    <div class="height5px"></div>
+    <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls text-center">
+        <button type="button" id="btnCancel05" class="comnBtnSecondary">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id="btnBack05" class="comnBtnSecondary">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id="btnsubmit05" class="comnBtn2">Save &amp; Continue</button>
+    </div>
+</div>
+
+<div id="Model_SH_PAN_VERIFICATION_Msg" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header ErrorModelHeader">
+                @*<button type="button" class="close" data-dismiss="modal" id="lblclose">&times;</button>*@
+                <h4 class="modal-title">Message Center</h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <div id="dvPANMsg" class="ModelContDiv ErrorContent" style="text-align: center;margin: 15px 0;font-size: 14px;">
+                    PAN, DOB and Name does not match with NSDL. Do you want to continue with CKYC data?
+                </div>
+
+                <div class="text-center" style="margin: 20px 0 0;">
+                    <button type="button" id="btn_SH_PAN_Match_No" class="comnBtnSecondary" data-dismiss="modal">No</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" id="btn_SH_PAN_Match_Yes" class="comnBtn2" data-dismiss="modal">Yes</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="Model_TH_PAN_VERIFICATION_Msg" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header ErrorModelHeader">
+                @*<button type="button" class="close" data-dismiss="modal" id="lblclose">&times;</button>*@
+                <h4 class="modal-title">Message Center</h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <div id="dvPANMsg" class="ModelContDiv ErrorContent" style="text-align: center;margin: 15px 0;font-size: 14px;">
+                    PAN, DOB and Name does not match with NSDL. Do you want to continue with CKYC data?
+                </div>
+
+                <div class="text-center" style="margin: 20px 0 0;">
+                    <button type="button" id="btn_TH_PAN_Match_No" class="comnBtnSecondary" data-dismiss="modal">No</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" id="btn_TH_PAN_Match_Yes" class="comnBtn2" data-dismiss="modal">Yes</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="Model_COMM_VERIFICATION_Msg" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header ErrorModelHeader">
+                <button type="button" class="close" data-dismiss="modal" id="lblclose">&times;</button>
+                <h4 class="modal-title">Message Center</h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <div id="dvPANMsg" class="ModelContDiv ErrorContent" style="text-align: center;margin: 15px 0;font-size: 14px;">
+                    Communication details for Investor and joint holder is same. The data will be updated with CERSAI. Do you want to continue?
+                </div>
+
+                <div class="text-center" style="margin: 20px 0 0;">
+                    <button type="button" id="btn_COMM_No" class="comnBtnSecondary" data-dismiss="modal">No</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" id="btn_COMM_YES" class="comnBtn2" data-dismiss="modal">Yes</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div id="Model_SH_PAN_VERIFICATION_Msg1" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header ErrorModelHeader">
+                @*<button type="button" class="close" data-dismiss="modal" id="lblclose">&times;</button>*@
+                <h4 class="modal-title">Message Center</h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <div id="dvPANMsg" class="ModelContDiv ErrorContent" style="text-align: center;margin: 15px 0;font-size: 14px;">
+                    Please enter valid DOB as per PAN.
+                </div>
+
+                <div class="text-center" style="margin: 20px 0 0;">
+                    <button type="button" id="btn_SH_PAN_Match_No1" class="comnBtnSecondary" data-dismiss="modal">No</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    @* <button type="button" id="btn_SH_PAN_Match_Yes" class="comnBtn2" data-dismiss="modal">Yes</button> *@
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="Model_TH_PAN_VERIFICATION_Msg1" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header ErrorModelHeader">
+                @*<button type="button" class="close" data-dismiss="modal" id="lblclose">&times;</button>*@
+                <h4 class="modal-title">Message Center</h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <div id="dvPANMsg" class="ModelContDiv ErrorContent" style="text-align: center;margin: 15px 0;font-size: 14px;">
+                    Please enter valid DOB as per PAN.
+                </div>
+
+                <div class="text-center" style="margin: 20px 0 0;">
+                    <button type="button" id="btn_TH_PAN_Match_No1" class="comnBtnSecondary" data-dismiss="modal">No</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    @* <button type="button" id="btn_TH_PAN_Match_Yes" class="comnBtn2" data-dismiss="modal">Yes</button> *@
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

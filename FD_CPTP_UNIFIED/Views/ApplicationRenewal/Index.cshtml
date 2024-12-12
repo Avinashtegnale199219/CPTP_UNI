@@ -1,0 +1,284 @@
+﻿@using FD_CPTP_UNIFIED
+@{
+    string CDNRootPath = Startup.Configuration["AppCssCDNPath"].ToString();
+    string WA_FD_BTP = Startup.Configuration["WA_FD_BTP"].ToString();
+    string Min_Cheque_Date = Startup.Configuration["Min_Cheque_Date"].ToString();
+    string Max_Cheque_Date = Startup.Configuration["Max_Cheque_Date"].ToString();
+    string Min_Amount = Startup.Configuration["Min_Amount"].ToString();
+    string EntityCode = ViewBag.EntityCode;
+}
+
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/Jquery-autocomplete/Jqueryautocomplete.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/DataTable/jquery-dataTables.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/jquery-sumoselect/sumoselect.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"css/font-awesome.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/datetextentry/jquery-datetextentry.min.css")" asp-append-version="true" />
+
+    @* ------------ Copy Renewal Request Entry Css --------------  *@
+    <link asp-append-version="true" rel="stylesheet" href="~/ApplicationRenewal/ApplicationRenewal.min.css" />
+}
+
+
+<div class="container">
+
+    <div class="panel panel-default panelCustmNew" id="divSearch">
+
+        <div class="panel-heading panel-headingNW panelHeadingPosRel" style="">
+            <label>Search</label>
+            <a class="ClsBackToDash" href="Default">
+                <i class="fa fa-home" aria-hidden="true"></i> Back To Dashboard
+            </a>
+        </div>
+
+        <div class="panel-body" style="float: left;">
+
+            <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 5px 15px;">
+
+                <ul class="UlSec01">
+                    <li class="LiInputSec">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">FDR NO</label>
+                            <div class="col-md-8">
+                                <input type="text" id="txtSearchFDRNo" value="" class="form-control  uppercase" errmsg="" autocomplete="off" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="vertLine"></li>
+                    <li class="LiInputSec">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">FOLIO NO</label>
+                            <div class="col-md-8">
+                                <input type="text" id="txtSearchFolio" class="form-control  uppercase" errmsg="" autocomplete="off" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="vertLine"></li>
+                    <li class="LiInputSec LiInputSec2">
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">PAN</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="txtSearchPAN" class="form-control  uppercase" errmsg="" autocomplete="off" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">DOB</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="txtSearchDOB" class="form-control  " errmsg="" autocomplete="off" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+
+                <div class="col-sm-12 text-center" style="">
+                    <button class="comnBtnSecondary clear_btn" type="button" id="btnClear" style="">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="comnBtn2 clear_btn" type="button" id="btnSearchRenewalRequest">Search</button>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 5px 15px;">
+
+                <div class="table-responsive" style="overflow:auto;">
+
+                    <table class="table table-default" id="tblRequestData">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>FDR No</th>
+                                <th>FDR Date</th>
+                                <th>Amount</th>
+                                <th class="NameTH">Name</th>
+                                <th>Scheme</th>
+                                <th>Tenure</th>
+                                <th>Interest Rate</th>
+                                <th>Maturity Amount</th>
+                                <th>Maturity Date</th>
+                                <th>Renewal Status</th>
+
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="panel panel-default panelCustmNew" id="DV_IMPNote">
+        <div class="panel-body boxShadow">
+            <div class="inner_box">
+                <div class="inner_boxCont">
+                    <h5>Important Note:</h5>
+                    <ol>
+                        <li>Deposits due for renewal only will be displayed in this module.</li>
+                        <li>You are not allowed to make any changes of depositors in this module.</li>
+                        <li>Please keep the renewal documents ready to upload before proceeding.</li>
+                        <li>Details apprearing in Renewal Application/FDR will be considered to renew the Deposits.</li>
+                        <li>You will be able to make renewal entry in this module only from 61 days upto 7 days prior to maturity.</li>
+                        <li>Changes in the Second holder/Third holder OR any other information shall be executed as per the details mentioned in Renewal Application/FDR.</li>
+                        <li>Any renewal of Deposit in advance of its maturity date, will be subject to the rate of interest and other terms & conditions prevailing on the date of said maturity.</li>
+                        <li>The Auto renewal tag cases will be able to make renewal entry in this module only from 61 days up to 10 days prior to maturity.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="DV_DATAENTRY" class="mainBodyOutr" style="display:none;">
+
+        <input type="hidden" id="hdnPrincAmount" name="name" value="" />
+        <input type="hidden" id="hdnMatuAmount" name="name" value="" />
+        <input type="hidden" id="hdnOldScheme" name="name" value="" />
+
+        <div class="InfoDiv01" id="IdInfoDiv" style="display: none;">
+            <style>
+                .InfoUlCls li {
+                    height: 33px;
+                }
+            </style>
+            <ul class="InfoUlCls">
+                <li class="">
+                    <span class="SpanCls1">Application Type</span>
+                    <span class="SpanCls2" id="lblApplicationType"></span>
+                </li>
+                <li class="liWidthAdj2">
+                    <span class="SpanCls1">Application Number</span>
+                    <span class="SpanCls2" id="lblApplicationNumber"></span>
+                    <input type="hidden" id="hdnApplicationNumber" value="" />
+                </li>
+                <li>
+                    <span class="SpanCls1">Depositor Category</span>
+                    <span class="SpanCls2" id="lblDepositorCategory"></span>
+                </li>
+                <li>
+                    <span class="SpanCls1">Broker Code</span>
+                    <span class="SpanCls2" id="lblBrokerCode"></span>
+                </li>
+                <li class="liWidthDouble">
+                    <span class="SpanCls1">Investor Name</span>
+                    <span class="SpanCls2" id="lblInvestorName"></span>
+                </li>
+                <li>
+                    <span class="SpanCls1">DOB</span>
+                    <span class="SpanCls2" id="lblDOB"></span>
+                </li>
+                <li>
+                    <span class="SpanCls1">PAN</span>
+                    <span class="SpanCls2" id="lblPAN"></span>
+                </li>
+                @*<li>
+                        <span class="SpanCls1">Mode of Payment</span>
+                        <span class="SpanCls2" id="lblModeOfPayment"></span>
+                    </li>*@
+                <li class="liWidthAdj1">
+                    <span class="SpanCls1">Amount</span>
+                    <span class="SpanCls2" id="lblAmount"></span>
+                </li>
+                <li class="liWidthAdj2">
+                    <span class="SpanCls1">Mobile Number</span>
+                    <span class="SpanCls2" id="lblMobileNumber"></span>
+                </li>
+                <li class="liWidthDouble">
+                    <span class="SpanCls1">Email ID</span>
+                    <span class="SpanCls2" id="lblEmailID"></span>
+                </li>
+                <li>
+                    <span class="SpanCls1">Folio Number</span>
+                    <span class="SpanCls2" id="lblFolioNumber"></span>
+                </li>
+                <li class="liWidthDouble">
+                    <span class="SpanCls1">Existing FDR Number</span>
+                    <span class="SpanCls2" id="lblExistingFDRNumber"></span>
+                </li>
+                <li class="liWidthDouble">
+                    <span class="SpanCls1">Last Investment Date</span>
+                    <span class="SpanCls2" id="lblLastInvestmentDate"></span>
+                </li>
+            </ul>
+        </div>
+
+        @{await Html.RenderPartialAsync("~/Views/Partial_View/_Stepper.cshtml");}
+
+        <div class="tab-content NavTabsCont" id="allTabsContainer">
+
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_RenewTab1.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab2.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_RenewTab3.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab4.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab5.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab6.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab7.cshtml");}
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_Tab8.cshtml");}
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="ModelMessage" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content ModelCustmSucc">
+            <div class="modal-header SuccessModelHeader">
+                <button type="button" class="close" data-dismiss="modal" id="lblclose">&times;</button>
+                <h4 class="modal-title">Alert</h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <div id="dvModalMsg" class="ModelContDiv SuccessContent">
+
+                </div>
+
+                @*<div class="text-center">
+                        <button type="button" id="" class="comnBtn2" data-dismiss="modal">OK</button>
+                    </div>*@
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="" class="comnBtn3" data-dismiss="modal" onclick="">OK</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@{await Html.RenderPartialAsync("~/Views/Partial_View/_Modal_View_Document.cshtml");}
+
+@section Scripts{
+
+    <script>
+
+        var State = '@ViewBag.State';
+        var Status = '@ViewBag.Status';
+        var WA_FD_BTP = '@String.Concat(WA_FD_BTP)';
+        var Min_Cheque_Date = '';
+        var Max_Cheque_Date = '';
+        var Min_Amount = '';
+        var PaymentMode = '';
+
+    </script>
+
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/datetextentry/jquery-datetextentry.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/DataTable/jquery-dataTables.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/jquery-sumoselect/jquery-sumoselect.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/Jquery-autocomplete/Jqueryautocomplete.min.js")" asp-append-version="true"></script>
+
+    @* ------------ Copy Renewal Request Entry js --------------  *@
+    <script src="~/ApplicationRenewal/ApplicationRenewal.min.js" asp-append-version="true"></script>
+}
+

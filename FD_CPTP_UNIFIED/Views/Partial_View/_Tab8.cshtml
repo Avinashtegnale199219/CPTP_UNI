@@ -1,0 +1,23 @@
+﻿<div class="tab-container tab-pane" data-tab-index="8" style="display:none;">
+    <div class="panel-heading panel-headingNW">
+        <i class="fa fa-file-text-o head-icon" aria-hidden="true"></i> Summary View
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="row1">
+
+            @{await Html.RenderPartialAsync("~/Views/Partial_View/_SummaryView.cshtml");}
+            <div class="height5px"></div>
+            <div class="height5px"></div>
+            <div class="height5px"></div>
+            <div class="height5px"></div>
+            <div class="height5px"></div>
+            <div class="height5px"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls text-center">
+                @*<button type="button" id="btnCancel08" class="comnBtn2">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;*@
+                <button type="button" id="btnBack08" class="comnBtnSecondary">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" id="btnsubmit08" class="comnBtn2">Save &amp; Continue</button>
+                <button type="button" id="btnClose08" class="comnBtn2" style="display:none;">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

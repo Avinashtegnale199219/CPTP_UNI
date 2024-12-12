@@ -1,0 +1,123 @@
+﻿<div id="DV_STEP3" class="tab-container tab-pane" data-tab-index="3" style="display:none;">
+    <div class="panel-heading panel-headingNW">
+        <i class="fa fa-cog head-icon" aria-hidden="true"></i> FD Configuration
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 PanelBGImg PanelBGImg3">
+        <div class="row1 row1WidAdjCls">
+            @*<div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+            <div class="form-group FormGrpCustm">
+                <label class="control-label">
+                    Fixed Deposit Amount<span class="red-text">*</span>
+                </label>
+                <input type="text" id="" class="form-control" style="font-weight:600;font-size:16px;" value="5,00,000">
+            </div>
+        </div>*@
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Deposit Category<span class="red-text">*</span></label>
+                    <select id="ddlCategory" class="form-control FD_DTLS" errmsg="Deposite Category is required..!" required>
+                        <option value="select">Select</option>
+
+                    </select>
+                </div>
+            </div>
+            <div id="DV_EMP_CODE" class="col-md-3 col-sm-3 col-xs-12 InpOutrCls" style="display:none">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Employee Code<span class="red-text">*</span></label>
+                    <input type="text" id="txtEmpCode" maxlength="50" class="form-control  NoSpecialChar FD_DTLS" errmsg="Employee Code is required..!" autocomplete="off" />
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Scheme<span class="red-text">*</span></label>
+                    <select id="ddlSchemes" class="form-control FD_DTLS" errmsg="Scheme is required..!" required>
+                        <option value="select">Select</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Interest Frequency<span class="red-text">*</span></label>
+                    <select id="ddlInterestFrequency" class="form-control FD_DTLS" errmsg="Interest Frequency is required..!" required>
+                        <option value="select">Select</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Tenure<span class="red-text">*</span></label>
+                    <select id="ddlTenure" class="form-control FD_DTLS" errmsg="Tenure is required..!" required>
+                        <option value="select">Select Tenure</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Deposit Payable To<span class="red-text">*</span></label>
+                    <select id="ddlDepositPayable" class="form-control FD_DTLS" errmsg="Deposite Payable To is required..!" required>
+                        <option value="select">Select</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Fdr Dispatch Mode<span class="red-text">*</span></label>
+                    <select id="ddlFdrDispatchMode" class="form-control FD_DTLS" errmsg="FDR Dispatch Mode is required..!" required>
+                        <option value="select">Select</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Auto Renewal Flag<span class="red-text">*</span></label>
+                    <select id="ddlAutoRenewal" class="form-control FD_DTLS" errmsg="Auto Renewal Flag is required..!" required>
+                        <option value="select">Select</option>
+                        <option value="YES">YES</option>
+                        <option value="NO">NO</option>
+                    </select>
+                </div>
+            </div>
+            <div id="DV_RENEWAL_FOR" class="col-md-3 col-sm-3 col-xs-12 InpOutrCls" style="display:none">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Renewal For<span class="red-text">*</span></label>
+                    <select id="ddlRenewalFor" class="form-control FD_DTLS" errmsg="Renewal For is required..!">
+                        <option value="select">Select</option>
+                        <option value="P">Principal Amount</option>
+                        <option value="F">Principal With Interest Amount</option>
+                    </select>
+                </div>
+            </div>
+            <div id="DV_TDS_FLAG" class="col-md-3 col-sm-6 col-xs-12 InpOutrCls ">
+                <div class="form-group FormGrpCustm form-check">
+                    <label class="control-label MobLblHide">&nbsp;</label>
+                    <input type="checkbox" class="form-check-input" id="chkTDFFlag">
+                    <label class="form-check-label" for="exampleCheck1">Do Not Deduct Tax at Source</label>
+                </div>
+            </div>
+            <div id="DV_HNG" class="col-md-3 col-sm-3 col-xs-12 InpOutrCls" style="display:none">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">H/G<span class="red-text">*</span></label>
+                    <select id="ddlHNG" class="form-control FD_DTLS" errmsg="HNG is required..!" disabled>
+                        <option value="select">Select</option>
+                    </select>
+                </div>
+            </div>
+            <div class="height5px"></div>
+            <div class="height5px"></div>
+            <div class="height5px"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls text-center">
+                <button type="button" id="btnCancel03" class="comnBtnSecondary">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" id="btnBack03" class="comnBtnSecondary">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" id="btnsubmit03" class="comnBtn2">Save &amp; Continue</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>

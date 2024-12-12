@@ -1,0 +1,144 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>FD_UNIFIED_CPTP</AssemblyName>
+    <RootNamespace>FD_UNIFIED_CPTP</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\NewFolder1\**" />
+    <Compile Remove="wwwroot\NewFolder2\**" />
+    <Compile Remove="wwwroot\TempDocs\**" />
+    <Content Remove="wwwroot\NewFolder1\**" />
+    <Content Remove="wwwroot\NewFolder2\**" />
+    <Content Remove="wwwroot\TempDocs\**" />
+    <EmbeddedResource Remove="wwwroot\NewFolder1\**" />
+    <EmbeddedResource Remove="wwwroot\NewFolder2\**" />
+    <EmbeddedResource Remove="wwwroot\TempDocs\**" />
+    <None Remove="wwwroot\NewFolder1\**" />
+    <None Remove="wwwroot\NewFolder2\**" />
+    <None Remove="wwwroot\TempDocs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\DataEntry_v2Controller.cs" />
+    <Compile Remove="Controllers\DocumentUpload_v2Controller.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="wwwroot\ApplicationView\" />
+    <Folder Include="wwwroot\ApplicationEdit\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\ApplicationRenewal\Index.cshtml" />
+    <None Include="Views\GenerateShortURL\Index.cshtml" />
+    <None Include="Views\PayInSlipGeneration\Index.cshtml" />
+    <None Include="Views\PayinSlip\Index.cshtml" />
+    <None Include="Views\RenewalRequestEntry\Index.cshtml" />
+    <None Include="wwwroot\ApplicationRenewal\ApplicationRenewal.js" />
+    <None Include="wwwroot\ApplicationRenewal\ApplicationRenewal.min.js" />
+    <None Include="wwwroot\RenewalRequestEntry\RenewalRequestEntry.js" />
+    <None Include="wwwroot\RenewDataEntry\js\Renewstep1.js" />
+    <None Include="wwwroot\RenewDataEntry\js\Renewstep2.js" />
+    <None Include="wwwroot\RenewDataEntry\js\Renewstep3.js" />
+    <None Include="wwwroot\RenewDataEntry\js\Renewstep4.js" />
+    <None Include="wwwroot\RenewDataEntry\js\Renewstep5.js" />
+    <None Include="wwwroot\RenewDataEntry\js\Renewstep6.js" />
+    <None Include="wwwroot\RenewDataEntry\js\Renewstep7.js" />
+    <None Include="wwwroot\RenewDataEntry\js\Renewstep8.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FD_CPTP_UNIFIED.BO\FD_CPTP_UNIFIED.BO.csproj" />
+    <ProjectReference Include="..\FD_CPTP_UNIFIED.DAL\FD_CPTP_UNIFIED.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ApiRequestor">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\ApiRequestor.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Core">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\EPPlus.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Impersonate">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\Impersonate.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextSharp.LGPLv2.Core">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\iTextSharp.LGPLv2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MF_FD_ESARATHI_APP">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\MF_FD_ESARATHI_APP.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcOptionsExtensions">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\MvcOptionsExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="UserApplicationDtls">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\UserApplicationDtls.dll</HintPath>
+    </Reference>
+    <Reference Include="WA_FD_CP_AUTHENTICATION_MODEL">
+      <HintPath>\\172.30.0.223\Central Document\@dlls\WA_FD_CP_AUTHENTICATION_MODEL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\ApplicationCancel\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\ApplicationCopy\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\DataEntry\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Partial_View\_Modal_CMS_LOC_Search_Gen.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Partial_View\_RenewTab3.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="wwwroot\DataEntry\js\pageloadrenewal.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

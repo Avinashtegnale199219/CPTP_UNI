@@ -1,0 +1,304 @@
+﻿@using FD_CPTP_UNIFIED
+@{
+    string CDNRootPath = Startup.Configuration["AppCssCDNPath"].ToString();
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/DataTable/jquery-dataTables.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"css/font-awesome.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/datepicker/datepicker3.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"css/tab2.css")" asp-append-version="true" />
+
+    <link href="~/DataEntry/css/CustmCss3.css" asp-append-version="true" rel="stylesheet" />
+}
+<style>
+    .form-group {
+        margin-bottom: 5px;
+    }
+
+    .table.table-default > tbody > tr > td,
+    .table.table-default > tbody > tr > th,
+    .table.table-default > tfoot > tr > td,
+    .table.table-default > tfoot > tr > th {
+        font-size: 12px;
+    }
+
+    .table.table-default > thead > tr > td,
+    .table.table-default > thead > tr > th {
+        font-size: 12px;
+    }
+
+    .content-wrapper {
+        padding-top: 50px;
+    }
+</style>
+
+
+<div class="container" id="MainDiv" style="margin-top:40px">
+
+    @* Search Pannel *@
+    <div class="panelCustm" id="SearchPanel">
+        <div class="panel-heading panel-headingNW panelHeadingPosRel">
+            <label>PayinSlip Generation</label>
+            <a class="ClsBackToDash" href="Default">
+                <i class="fa fa-home" aria-hidden="true"></i> Back To Dashboard
+            </a>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="row1" id="">
+                <div class="col-md-4 col-sm-4 col-xs-12 InpOutrCls" id="divfdquickentry">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">CMS Bank<span class="red-text">*</span></label>
+                        <select class="form-control required" name="Tenure" id="ddlBankName"></select>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 InpOutrCls">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">CPTP Location<span class="red-text">*</span></label>
+                        <select class="form-control required" name="Tenure" id="ddlBranchName"></select>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 InpOutrCls">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">HDFC Bank CMS Branch<span class="red-text">*</span></label>
+                        <select class="form-control required" name="Tenure" id="ddlStateName"></select>
+                    </div>
+                    <a class="AncSelectBtn1" id="lnkCMSBranchSearch" data-toggle="modal" data-target="#ModelCMSBranchSearch">Search other HDFC Branch</a>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls">
+                    <div class="form-group FormGrpCustm SearchDate" id="">
+                        <label class="control-label">From Date</label>
+                        <input name="txtDob" type="text" id="txtStartDate" autocomplete="off" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-12 InpOutrCls" id="trenddate">
+                    <div class="form-group FormGrpCustm SearchDate" id="">
+                        <label class="control-label">To Date</label>
+                        <input name="EndDate" type="text" id="txtEndDate" autocomplete="off" class="form-control">
+                    </div>
+                </div>
+                @*<div class="col-md-4" id="PnlddlEXCCMSbank">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-sm-5"><strong>CMS Branch<span class="red-text">*</span> </strong></label>
+                                <div class="col-sm-5">
+                                    <input type="text" id="txtEXCCMSbankName" disabled>
+                                    <input type="hidden" id="hdnEXCCMSbankCode">
+                                </div>
+                                <a id="lnkCMSBranchSearch" data-toggle="modal" data-target="#ModelCMSBranchSearch" style="float: left;margin: 2px 0px 2px 2px;cursor:pointer;">Select</a>
+
+                            </div>
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+
+        <div class="panelCustm" id="divGetDetails" style="display:none;">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="table coman_table_head table-responsive">
+                    <table id="tblStaging" class="table table-default">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Select
+                                </th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+                                <th style="display:none"></th>
+
+                                <th>Payinslip No</th>
+                                <th>PayinSlip Generated Date</th>
+                                <th>Generated by </th>
+                                <th>Count</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <br />
+                <div class="row" style="text-align:center;">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <button type="button" name="btnSearch" id="btnGenerate" class="btn btn-red">Generate</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panelCustm" id="divGetDetails1" style="display:none;">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div id="dvStaging1" class="table coman_table_head table-responsive">
+                    <table id="tblClientDtl" class="table table-default" style="border:1px solid black;border-collapse:collapse;width:300px">
+                        <thead>
+                            <tr style="border:1px solid #000;">
+                                <th>Client ID</th>
+                                <th>Client Name</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                    <table id="tblStaging1" class="table table-default" style="border:1px solid black;border-collapse:collapse; width:100%;">
+                        <thead>
+                            <tr style="border:1px solid #000;">
+
+                                <th>SR NO</th>
+                                <th><span id="spClientCode">(MF99FCAMSK)</span>PAY IN SLIP NO</th>
+                                <th>Entry Date</th>
+                                <th>Pick Up Date</th>
+                                <th>Branch</th>
+                                <th>Appl No</th>
+                                <th>Applicant Name</th>
+                                <th>Amount</th>
+                                <th>Cheque No</th>
+                                <th>Bank</th>
+                                <th>PAYIN SLIP BATCH NO</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panelCustm" id="divGetDetails2" style="display:none;">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="table coman_table_head table-responsive">
+                    <table id="tblStaging2" class="table table-default">
+                        <thead>
+                            <tr>
+
+                                <th>Dep slip</th>
+                                <th>P/up</th>
+                                <th>Amount</th>
+                                <th>Chqno</th>
+                                <th>Chq dt</th>
+                                <th>Bk code</th>
+                                <th>B-brn</th>
+                                <th>Client code</th>
+                                <th>Drw_name</th>
+                                <th>Loc_code</th>
+                                <th>ORG_BRN</th>
+                                <th>CLIENT ARR</th>
+                                <th>PRODUCT</th>
+                                <th>DESP_BK</th>
+                                <th>ACTV DT</th>
+                                <th>CLIENT TYPE</th>
+                                <th>Enrichment1</th>
+                                <th>Enrichment 2</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        @* End Search Panel *@
+
+
+    </div>
+
+</div>
+
+@{await Html.RenderPartialAsync("~/Views/Partial_View/_Modal_CMS_LOC_Search.cshtml");}
+
+
+@section Scripts{
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/table2Excel/jquery-table2excel.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/table2Pdf/JSPDF1.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/table2Pdf/jspdf-plugin-autotable.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/DataTable/jquery-dataTables.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/datepicker/bootstrap-datepicker.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"js/tab2.js")" asp-append-version="true"></script>
+
+    <script src="~/AjaxErrorFunction.js"></script>
+    <script src="~/DataEntry/js/Modal_CMS_LOC_Search.js"></script>
+    <script src="~/PayinSlipGeneration/PayInSlipGeneration.js"></script>
+
+
+}
+
+

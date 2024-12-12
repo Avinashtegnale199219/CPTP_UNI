@@ -1,0 +1,166 @@
+﻿@using FD_CPTP_UNIFIED
+@{
+    string CDNRootPath = Startup.Configuration["AppCssCDNPath"].ToString();
+}
+@section Styles{
+
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/DataTable/jquery-dataTables.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"css/font-awesome.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"lib/datepicker/datepicker3.min.css")" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat(CDNRootPath,"css/tab2.css")" asp-append-version="true" />
+
+    <link href="~/DataEntry/css/CustmCss3.css" asp-append-version="true" rel="stylesheet" />
+}
+
+
+
+<style>
+    .panel-search .control-label {
+        display: block;
+    }
+
+    .table.table-default {
+        min-width: 300px;
+    }
+
+    .content-wrapper {
+        padding-top: 50px;
+    }
+
+    .dataTables_filter {
+        margin-bottom: 5px;
+    }
+</style>
+
+<div class="container" style="margin-top:40px">
+    <div class="panelCustm" id="pnlTable">
+        <div class="panel-heading panel-headingNW panelHeadingPosRel" style="margin-bottom: 0;">
+            <label>Investment Completion</label>
+            <a class="ClsBackToDash" href="Default">
+                <i class="fa fa-home" aria-hidden="true"></i> Back To Dashboard
+            </a>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 15px;border: 1px solid #E31837;">
+            <ul id="tabs" class="tabs">
+                <li><a name="#tab2Tab1">Investment Declaration Status</a></li>
+                <li><a name="#tab2Tab2">Generate Short URL</a></li>
+            </ul>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="tab_content">
+                        <div id="tab2Tab1">
+                            <div class="row1" id="tblrow2">
+                                <div class="table-responsive dataTables_wrapper" style="overflow:auto;">
+                                    <table class="table table-default" id="tblInvDecStatus">
+                                        <thead>
+                                            <tr>
+                                                <th>Payment Mode</th>
+                                                <th>Application No</th>
+                                                <th>Application Date</th>
+                                                <th>Amount</th>
+                                                <th>Name</th>
+                                                <th>PAN</th>
+                                                <th>Mobile</th>
+                                                <th>Email</th>
+                                                <th>Scheme</th>
+                                                <th>Category</th>
+                                                <th>Tenure</th>
+                                                <th>Interest Rate</th>
+                                                <th>Created By</th>
+                                                <th>Created Date</th>
+                                                <th>Status</th>
+                                                <th>Remark</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab2Tab2">
+                            <div class="row1" id="tblrow">
+                                <div class="table-responsive dataTables_wrapper" style="overflow:auto;">
+                                    <table class="table table-default" id="tblApplData">
+                                        <thead>
+                                            <tr>
+                                                <th>Action</th>
+                                                <th>Payment Mode</th>
+                                                <th>Application No</th>
+                                                <th>Application Date</th>
+                                                <th>Amount</th>
+                                                <th>Name</th>
+                                                <th>PAN</th>
+                                                <th>Mobile</th>
+                                                <th>Email</th>
+                                                <th>Scheme</th>
+                                                <th>Category</th>
+                                                <th>Tenure</th>
+                                                <th>Interest Rate</th>
+                                                <th>Created By</th>
+                                                <th>Created Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*avinash added*@
+            <input type="hidden" id="hdnApplNo" name="name" value="" />
+            <input type="hidden" id="hdnPayment_mode" name="name" value="" />
+        </div>
+    </div>
+</div>
+
+@*avinash added*@
+<div id="ModelPopup_Regenerate" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-sm" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content ">
+            <div class="modal-header ">
+                <button type="button" class="close" data-dismiss="modal" id="">&times;</button>
+                <h4 class="modal-title">Regenarate</h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <div id="Div_Regenerate" class="ModelContDiv ">
+                    Are you sure ?
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: center">
+                <button type="button" id="Regenerate_YES" class="comnBtn2" data-dismiss="modal" style="margin: 0;">Yes</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" id="Regenerate_NO" class="comnBtn2" data-dismiss="modal" style="margin: 0;">No</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/table2Excel/jquery-table2excel.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/DataTable/jquery-dataTables.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"lib/datepicker/bootstrap-datepicker.min.js")" asp-append-version="true"></script>
+    <script type="text/javascript" src="@String.Concat(CDNRootPath,"js/tab2.js")" asp-append-version="true"></script>
+
+    <script src="~/AjaxErrorFunction.js" asp-append-version="true"></script>
+    <script src="~/GenerateShortURL/GenerateShortURL.min.js" asp-append-version="true"></script>
+    <script src="~/InvestmentDeclarationStatus/InvestmentDeclarationStatus.min.js" asp-append-version="true"></script>
+    <script>
+        $('#DV_MSG_CENTER').show();
+        var TabIndex = '@ViewBag.TabIndex';
+        if (TabIndex == 1)
+        {
+
+            $('[name="#tab2Tab1"]').click();
+        }
+        else if (TabIndex == 2)
+        {
+
+            $('[name="#tab2Tab2"]').click()
+        }
+
+    </script>
+}

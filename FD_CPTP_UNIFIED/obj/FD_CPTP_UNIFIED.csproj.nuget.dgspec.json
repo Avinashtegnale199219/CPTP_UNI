@@ -1,0 +1,256 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED\\FD_CPTP_UNIFIED.csproj": {}
+  },
+  "projects": {
+    "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.BO\\FD_CPTP_UNIFIED.BO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.BO\\FD_CPTP_UNIFIED.BO.csproj",
+        "projectName": "FD_CPTP_UNIFIED.BO",
+        "projectPath": "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.BO\\FD_CPTP_UNIFIED.BO.csproj",
+        "packagesPath": "C:\\Users\\100004659\\.nuget\\packages\\",
+        "outputPath": "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.BO\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\100004659\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "\\\\172.30.0.223\\Central Document\\@dlls": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.DAL\\FD_CPTP_UNIFIED.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.DAL\\FD_CPTP_UNIFIED.DAL.csproj",
+        "projectName": "FD_CPTP_UNIFIED.DAL",
+        "projectPath": "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.DAL\\FD_CPTP_UNIFIED.DAL.csproj",
+        "packagesPath": "C:\\Users\\100004659\\.nuget\\packages\\",
+        "outputPath": "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\100004659\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "\\\\172.30.0.223\\Central Document\\@dlls": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {
+              "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.BO\\FD_CPTP_UNIFIED.BO.csproj": {
+                "projectPath": "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.BO\\FD_CPTP_UNIFIED.BO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED\\FD_CPTP_UNIFIED.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED\\FD_CPTP_UNIFIED.csproj",
+        "projectName": "FD_UNIFIED_CPTP",
+        "projectPath": "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED\\FD_CPTP_UNIFIED.csproj",
+        "packagesPath": "C:\\Users\\100004659\\.nuget\\packages\\",
+        "outputPath": "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\100004659\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "\\\\172.30.0.223\\Central Document\\@dlls": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {
+              "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.BO\\FD_CPTP_UNIFIED.BO.csproj": {
+                "projectPath": "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.BO\\FD_CPTP_UNIFIED.BO.csproj"
+              },
+              "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.DAL\\FD_CPTP_UNIFIED.DAL.csproj": {
+                "projectPath": "D:\\Avinash\\Handover\\CPTP_UNI\\FD_CPTP_UNIFIED.DAL\\FD_CPTP_UNIFIED.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "BuildBundlerMinifier": {
+              "target": "Package",
+              "version": "[3.2.449, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

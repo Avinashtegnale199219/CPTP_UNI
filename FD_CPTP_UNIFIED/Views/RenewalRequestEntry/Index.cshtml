@@ -1,0 +1,544 @@
+﻿
+@{
+    string WA_FD_BTP = Startup.Configuration["WA_FD_BTP"].ToString();
+}
+
+@section Styles{
+    <link href="~/lib/Jquery-autocomplete/Jqueryautocomplete.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/form.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/lib/datetextentry/jquery-datetextentry.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/lib/DataTable/jquery.dataTables.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/DataEntry/css/font-awesome.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/data_entry_page_New.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/RenewalRequestEntry/Renewal.min.css" rel="stylesheet" asp-append-version="true" />
+
+}
+<style>
+
+    .UlSec01 {
+        width: 100%;
+        height: auto;
+        float: left;
+        border: 1px solid #ddd;
+        padding: 5px;
+        list-style: none;
+    }
+
+        .UlSec01 li.LiInputSec {
+            width: 25%;
+            height: auto;
+            float: left;
+            margin: 5px 0 0 0;
+        }
+
+            .UlSec01 li.LiInputSec.LiInputSec2 {
+                width: calc(50% - 4px);
+                height: auto;
+                float: left;
+            }
+
+        .UlSec01 li.vertLine {
+            width: 2px;
+            float: left;
+            background-color: #a4a4a4;
+            height: 45px;
+        }
+
+    .panel.panel-default .UlSec01 .form-control {
+        height: 24px !important;
+    }
+
+    .UlSec01 span.jq-dte {
+        padding: 2px 6px;
+    }
+</style>
+<div class="container-fluid data_entry_head">
+
+    <div class="panel panel-default" id="divSearch">
+        <div class="panel-heading panel-headingNW panelHeadingPosRel">
+            <label>Search</label>
+            <a class="ClsBackToDash" href="Default">
+                <i class="fa fa-home" aria-hidden="true"></i> Back To Dashboard
+            </a>
+        </div>
+        <div class="panel-body" style="float: left;">
+            <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 5px 15px;">
+
+                <ul class="UlSec01">
+                    <li class="LiInputSec">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">FDR NO</label>
+                            <div class="col-md-8">
+                                <input type="text" id="txtSearchFDRNo" value="" class="form-control  uppercase" errmsg="" autocomplete="off" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="vertLine"></li>
+                    <li class="LiInputSec">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">FOLIO NO</label>
+                            <div class="col-md-8">
+                                <input type="text" id="txtSearchFolio" class="form-control  uppercase" errmsg="" autocomplete="off" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="vertLine"></li>
+                    <li class="LiInputSec LiInputSec2">
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">PAN</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="txtSearchPAN" class="form-control  uppercase" errmsg="" autocomplete="off" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">DOB</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="txtSearchDOB" class="form-control  " errmsg="" autocomplete="off" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+
+                <div class="col-sm-12 text-center" style="margin-top: 10px;">
+                    <button class="comnBtn2 clear_btn" type="button" id="btnSearchRenewalRequest">Search</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="comnBtn2 clear_btn" type="button" id="btnClear" style="">Clear</button>
+                </div>
+
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="/*padding:0;*/">
+                <div class="table-responsive" style="overflow:auto;">
+                    <table class="table table-default" id="tblRequestData">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>FDR No</th>
+                                <th>FDR Date</th>
+                                <th>Amount</th>
+                                <th class="NameTH">Name</th>
+                                <th>Scheme</th>
+                                <th>Tenure</th>
+                                <th>Interest Rate</th>
+                                <th>Maturity Amount</th>
+                                <th>Maturity Date</th>
+                                <th>Renewal Status</th>
+
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="panel panel-default" id="divGetDetails">
+        <div class="panel-body">
+            <div class="Div1 FullWidth">
+                <div class="col-md-12 col-sm-12 col-xs-12" style="/*padding:0;*/">
+                    <table class="table tableStyle MainTableClass">
+                        <tbody>
+
+                            <tr class="trWidth100">
+                                <td colspan="4">
+                                    <h4 class="TblTitleClass">
+                                        REQUEST DETAILS
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">REQ NO<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtReqNo" value="NEW" class="form-control  " errmsg="" autocomplete="off" disabled />
+                                </td>
+                                <td>
+                                    <label class="control-label">REQ DT<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtReqDt" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                            </tr>
+
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">REQ TYPE<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <select class="form-control " errmsg="" name="" id="ddlReqType">
+                                        <option value="select">Select</option>
+                                        <option value="RENEWAL">RENEWAL</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <label class="control-label">DEP NO<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtDepNo" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">RENEWAL OPTION<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <select id="ddlRenewedAmt" class="form-control " errmsg="" name="">
+                                        <option value="select">Select</option>
+                                        <option value="P">Principal Amount</option>
+                                        <option value="F">Principal With Interest Amount</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <label class="control-label">AMOUNT TO BE RENEWED (Rs.<b><span id="spnRenewedAmount" class="red-text"></span></b>) </label>
+                                </td>
+                                <td>
+                                    <select id="ddlRenewedAmtRemark" class="form-control " errmsg="" name="">
+                                        <option value="select">Select</option>
+                                        <option value="A">APPROVE</option>
+                                        <option value="R">REJECT</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">FOLIO NO<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtFolioNo" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                                <td>
+                                    <label class="control-label">REQ BATCH<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtReqBatch" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">OLD BROKER CODE<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtOldBrokerCode" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                                <td>
+                                    <label class="control-label">NEW BROKER CODE<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtNewBrokerCode" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">REQ USER<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtReqUser" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                                <td>
+                                    <label class="control-label">REQ STATUS<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <select id="ddlReqStatus" class="form-control " errmsg="" name="">
+                                        <option value="select">Select</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr class="trWidth100">
+                                <td colspan="4">
+                                    <h4 class="TblTitleClass">
+                                        DEPOSITOR'S DETAILS
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">NAME<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtName" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                                <td>
+                                    <label class="control-label">PREMISES<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtPremises" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                            </tr>
+
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">ROAD NAME<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtRoadName" class="form-control  " errmsg="" autocomplete="off" />
+
+                                </td>
+                                <td>
+                                    <label class="control-label">LANDMARK<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtLandmark" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">CITY/VILLAGE<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtCity" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                                <td>
+                                    <label class="control-label">AREA<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtArea" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                            </tr>
+
+                            <tr class="trWidth100">
+                                <td colspan="4">
+                                    <h4 class="TblTitleClass">
+                                        DEPOSIT DETAILS
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">DEP DATE<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtDepDate" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                                <td>
+                                    <label class="control-label">MAT DATE<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtMatDate" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                            </tr>
+
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">DEP AMOUNT<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtDepAmount" class="form-control  " errmsg="" autocomplete="off" />
+
+                                </td>
+                                <td>
+                                    <label class="control-label">MAT AMOUNT<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtMatAmount" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                            </tr>
+
+                            <tr class="">
+
+                                <td>
+                                    <label class="control-label">Scheme<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtScheme" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+
+
+                                <td>
+                                    <label class="control-label">Interest Rate<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtIntRate" class="form-control  " errmsg="" autocomplete="off" />
+
+                                </td>
+                            </tr>
+
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">Tenure<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtTenure" class="form-control  " errmsg="" autocomplete="off" />
+
+                                </td>
+                            </tr>
+
+                            <tr class="trWidth100">
+                                <td colspan="4">
+                                    <h4 class="TblTitleClass">
+                                        BANK DETAILS
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">MICR CODE<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtMicrCd" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                                <td>
+                                    <label class="control-label">NEFT CODE<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtRtgsCd" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                            </tr>
+
+                            <tr class="">
+                                <td>
+                                    <label class="control-label">BANK NAME<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtBankName" class="form-control  " errmsg="" autocomplete="off" />
+
+                                </td>
+                                <td>
+                                    <label class="control-label">ACCOUNT NO<span class="red-text"></span></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="txtAccountNo" class="form-control  " errmsg="" autocomplete="off" />
+                                </td>
+                            </tr>
+
+                            <tr class="trWidth100">
+                                <td colspan="4">
+                                    <h4 class="TblTitleClass">
+                                        DOCUMENT UPLOAD
+                                    </h4>
+                                </td>
+                            </tr>
+
+                            <tr class="trWidth100">
+                                <td colspan="2" class="FlvUpldOutrCls">
+                                    <input type="file" id="flvApplicationFormUpload" multiple style="min-height: 25px;padding: 2px;" />
+                                </td>
+                                <td style="width: 75%;">
+                                    <button class="comnBtn2" id="btnUploadApplicationForm">Upload</button>
+                                    <span style="color:green;font-size:12px;" id="msgFormUpload" class="uploadmsg"></span>
+                                </td>
+
+                            </tr>
+
+                            <tr class="trWidth100">
+                                <td colspan="2">
+                                    <table id="tblDocList" class="table table-default TblDocList">
+                                        <thead>
+                                            <tr>
+                                                <th>File Name</th>
+                                                <th>View</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="clear_tbody">
+                                            <tr class="empty_table">
+                                                <td colspan="3">No Records Found..!</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td colspan="2"></td>
+                            </tr>
+
+                            <tr class="trWidth100">
+                                <td colspan="4">
+                                    <div class="col-sm-12 text-center">
+                                        <button class="comnBtn2 clear_btn" type="button" id="btnSave">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <button class="comnBtn2 clear_btn" type="button" id="btnCancel" style="">Cancel</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body boxShadow">
+            <div class="inner_box">
+                <div class="inner_boxCont">
+                    <h5>Important Note:</h5>
+                    <ol>
+                        <li>Deposits due for renewal only will be displayed in this module.</li>
+                        <li>You are not allowed to make any changes of depositors in this module.</li>
+                        <li>Please keep the renewal documents ready to upload before proceeding.</li>
+                        <li>Details apprearing in Renewal Application/FDR will be considered to renew the Deposits.</li>
+                        <li>You will be able to make renewal entry in this module only from 45 days upto 7 days prior to maturity.</li>
+                        <li>Changes in the Second holder/Third holder OR any other information shall be executed as per the details mentioned in Renewal Application/FDR.</li>
+                        <li>Any renewal of Deposit in advance of its maturity date, will be subject to the rate of interest and other terms & conditions prevailing on the date of said maturity.</li>
+                        <li>The Auto renewal tag cases will be able to make renewal entry in this module only from 45 days up to 10 days prior to maturity.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--Error validation model popup-->
+@{await Html.RenderPartialAsync("~/Views/Partial_View/_Modal_Error.cshtml");}
+<!--Error validation model popup-->
+<!--Success validation model popup-->
+@{await Html.RenderPartialAsync("~/Views/Partial_View/_Modal_Success.cshtml");}
+<!--Delete alert model popup-->
+@{await Html.RenderPartialAsync("~/Views/Partial_View/ModalAlert.cshtml");}
+
+@{await Html.RenderPartialAsync("~/Views/Partial_View/_Modal_View_Document.cshtml");}
+
+<div id="ModelMessage" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content ModelCustmSucc">
+            <div class="modal-header SuccessModelHeader">
+                <button type="button" class="close" data-dismiss="modal" id="lblclose">&times;</button>
+                <h4 class="modal-title">Alert</h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <div id="dvModalMsg" class="ModelContDiv SuccessContent">
+
+                </div>
+
+                @*<div class="text-center">
+                        <button type="button" id="" class="comnBtn2" data-dismiss="modal">OK</button>
+                    </div>*@
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="" class="comnBtn3" data-dismiss="modal" onclick="Save()">OK</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/lib/Jquery-autocomplete/Jqueryautocomplete.min.js" asp-append-version="true"></script>
+    <script src="~/lib/DataTable/jquery.dataTables.min.js" asp-append-version="true"></script>
+    <script src="~/lib/datetextentry/jquery-datetextentry.min.js" asp-append-version="true"></script>
+    <script src="~/RenewalRequestEntry/RenewalRequestEntry.min.js" asp-append-version="true"></script>
+
+    <script>
+        var WA_FD_BTP = '@String.Concat(WA_FD_BTP)';
+    </script>
+
+
+}

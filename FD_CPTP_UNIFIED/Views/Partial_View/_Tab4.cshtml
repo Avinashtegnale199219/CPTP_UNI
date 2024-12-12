@@ -1,0 +1,133 @@
+﻿<div id="DV_STEP4" class="tab-container tab-pane" data-tab-index="4" style="display:none;">
+    <div class="panel-heading panel-headingNW">
+        <i class="fa fa-university head-icon" aria-hidden="true"></i> Repayment Bank Details
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 PanelBGImg PanelBGImg4">
+        <div id="DV_PROV_BANK" class="row1 row1WidAdjCls">
+            <div class="col-md-6 col-sm-12 col-xs-12 InpOutrCls">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label">Provisional Bank<span class="red-text">*</span></label>
+                    <select id="ddlProvBank" class="form-control">
+                        <option value="select">Select</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-1 col-sm-12 col-xs-12 InpOutrCls">
+                <span class="OrClass">OR</span>
+            </div>
+            <div class="col-md-2 col-sm-12 col-xs-12 InpOutrCls InpOutrClsTextAlng">
+                <div class="form-group FormGrpCustm">
+                    <label class="control-label" style="visibility:hidden;"><span class="red-text">*</span></label>
+                    <button type="button" id="btnAddNewBank" class="comnBtn2" style="margin:0;">Add New Bank</button>
+                </div>
+            </div>
+        </div>
+        <div id="DV_BANK_DTLS" style="display:none">
+            <div class="row1 row1WidAdjCls" id="DV_Srch_Bank">
+                <div class="col-md-6 col-sm-12 col-xs-12 InpOutrCls">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">Search Bank<span class="red-text">*</span></label>
+                        <input type="text" id="txtSearchBank" class="form-control" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <div class="row1 row1WidAdjCls">
+                <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">Bank Name<span class="red-text">*</span></label>
+                        <input type="text" id="txtBankName" class="form-control DisabledControl BANK_DTLS" errmsg="Bank Name is required..!" autocomplete="off" disabled required>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">Bank Branch<span class="red-text">*</span></label>
+                        <input type="text" id="txtBranchName" class="form-control DisabledControl BANK_DTLS" errmsg="Bank Branch is required..!" autocomplete="off" disabled required>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">MICR Code<span class="red-text">*</span></label>
+                        <input type="text" id="txtMICRCode" class="form-control DisabledControl BANK_DTLS" errmsg="MICR Code is required..!" autocomplete="off" disabled required>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">NEFT<span class="red-text">*</span></label>
+                        <input type="text" id="txtNEFTCode" class="form-control DisabledControl BANK_DTLS" errmsg="NEFT is required..!" autocomplete="off" disabled required>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-3 col-sm-6 col-xs-12 InpOutrCls">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">Bank A/C No<span class="red-text">*</span></label>
+                        <input type="password" id="txtBankAccountNo" style="font-weight:bold;font-size:16px;" errmsg="Bank Account No is required..!" class="form-control number_only BANK_DTLS" autocomplete="off" maxlength="20" required>
+                        <span class="errorbox" style="position: absolute; top: 3px; left: 166px;display:none"></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 InpOutrCls clsConfirmBankAccountNo">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">Re-enter Bank A/C No<span class="red-text">*</span></label>
+                        <input type="text" id="txtConfirmBankAccountNo" style="font-weight:bold;font-size:16px;" errmsg="Re-enter Bank account no..!" class="form-control number_only BANK_DTLS" autocomplete="off" maxlength="20" required>
+                        <span class="errorbox" style="position: absolute; top: 3px; left: 166px;display:none"></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls ClsUploadChqCopy">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label">Upload Cancel Cheque Copy<span id="spnApplFormUpload" class="red-text">*</span></label>
+                        <input type="file" id="flvCancelledChequeCopy" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 InpOutrCls ClsUploadChqCopy">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label" style="visibility:hidden;"><span class="red-text">*</span></label>
+                        <button type="button" id="btnUploadCancelledChequeCopy" class="comnBtn2" style="margin:0 0 15px 0;">Upload</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row1 row1WidAdjCls" id="DV_OR_ADD_NEW" style="display:none">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <span class="OrClass">OR</span>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div class="form-group FormGrpCustm">
+                        <label class="control-label" style="visibility:hidden;"><span class="red-text">*</span></label>
+                        <button type="button" id="btnOrAddNewBank" class="comnBtn2" style="margin:0 0 15px 0;">Add New Bank</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="height5px"></div>
+    <div class="height5px"></div>
+    <div class="height5px"></div>
+    <div class="col-md-12 col-sm-12 col-xs-12 InpOutrCls text-center row2 row1WidAdjCls2">
+        <button type="button" id="btnCancel04" class="comnBtnSecondary">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id="btnBack04" class="comnBtnSecondary">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id="btnsubmit04" class="comnBtn2">Save &amp; Continue</button>
+    </div>
+</div>
+
+@*avinash added popup for step4*@
+<div id="Model_TPV_Msg" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" id="lblclose">&times;</button>
+                <h4 class="modal-title" style="font-weight:600;">Message Center</h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <div id="dvTPVMsg" class="ModelContDiv" style="text-align: left;margin: 15px 0 5px 0;font-size: 14px;text-align: justify;background-color: #eee;padding: 5px 10px;">
+                    The first holder in the bank account from where remittance is made must be the sole/first applicant in MMFSL-FD & interest/redemption proceeds shall be credited to the same account from where funds are received.
+                </div>
+
+                <div class="text-center" style="margin: 20px 0 0;">
+                    <button type="button" id="btn_TPV_OK" class="comnBtn2" data-dismiss="modal" style="margin-bottom: 10px;">OK</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

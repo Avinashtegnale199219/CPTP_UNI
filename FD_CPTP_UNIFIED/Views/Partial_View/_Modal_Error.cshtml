@@ -1,0 +1,82 @@
+﻿<style>
+    .ModelCustmError {
+        
+    }
+        .ModelCustmError .modal-header .close {
+            font-size: 18px;
+            line-height: 22px;
+            width: 24px;
+            height: 24px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .ModelCustmError .modal-body {
+            padding: 15px;
+        }
+        .ModelCustmError .modal-body .ModelContDiv {
+            background-color: #ebebeb;
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+        }
+            .ModelCustmError .modal-body .ModelContDiv > p:last-child {
+                margin-bottom: 0;
+            }
+            .ModelCustmError .modal-footer {
+                text-align: center;
+            }
+                .ModelCustmError .modal-footer .comnBtn3 {
+                    width: auto;
+                    height: auto;
+                    float: none;
+                    display: inline-block;
+                    border: 2px solid #333333;
+                    border-top-color: rgb(51, 51, 51);
+                    border-right-color: rgb(51, 51, 51);
+                    border-bottom-color: rgb(51, 51, 51);
+                    border-left-color: rgb(51, 51, 51);
+                    color: #333333;
+                    padding: 5px 12px 4px;
+                    margin: 5px;
+                    font-size: 12px;
+                    background-color: #ffffff;
+                    font-weight: 600;
+                    border-radius: 2px;
+                    min-width: 75px;
+                }
+                    .ModelCustmError .modal-footer .comnBtn3:hover,
+                    .ModelCustmError .modal-footer .comnBtn3:focus,
+                    .ModelCustmError .modal-footer .comnBtn3:active {
+                        background-color: #e21937;
+                        color: #ffffff;
+                        border-color: transparent;
+                    }
+</style>
+
+<div id="ModelError" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content ModelCustmError">
+            <div class="modal-header ErrorModelHeader">
+                <button type="button" class="close" data-dismiss="modal" id="lblclose">&times;</button>
+                <h4 class="modal-title">Error</h4>
+            </div>
+            <div class="modal-body" style="width: 100%;">
+                <div id="dvErrorMsg" class="ModelContDiv ErrorContent">
+
+                </div>
+
+                @*<div class="text-center">
+                <button type="button" id="" class="comnBtn2" data-dismiss="modal">OK</button>
+            </div>*@
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="" class="comnBtn3" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
